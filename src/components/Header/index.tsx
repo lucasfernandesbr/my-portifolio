@@ -2,18 +2,24 @@
 
 import Container from '../Container'
 
-import HeaderNav from './Nav'
+import HeaderMenu from './Nav'
+
+import { HeaderParams } from './types'
+
+import CountrySwitch from './CountrySwitch'
 
 import { Wrapper } from './styles'
 
-export default function Header() {
+export default function Header({ content, locale }: HeaderParams) {
+	const { logo, nav, countrySwitch } = content
+
 	return (
 		<header>
 			<Container>
 				<Wrapper>
-					<div>Logo</div>
-					<HeaderNav />
-					<div>Country Switch</div>
+					<div>{logo}</div>
+					<HeaderMenu content={nav} />
+					<CountrySwitch content={countrySwitch} locale={locale} />
 				</Wrapper>
 			</Container>
 		</header>

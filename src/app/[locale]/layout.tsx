@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import StyledComponentsRegistry from './lib/registry'
+import StyledComponentsRegistry from '../lib/registry'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,11 +12,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
+	params: { locale },
 }: Readonly<{
 	children: React.ReactNode
+	params: { locale: string }
 }>) {
 	return (
-		<html lang="en">
+		<html lang={locale}>
 			<body className={inter.className}>
 				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 			</body>

@@ -4,6 +4,7 @@
 		"enabled": true
 	},
 	"linter": {
+		"include": ["*.json"],
 		"enabled": true,
 		"rules": {
 			"recommended": true
@@ -17,11 +18,15 @@
 	},
 	"javascript": {
 		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"trailingComma": "none",
 			"semicolons": "asNeeded",
-			"quoteStyle": "single",
 			"arrowParentheses": "always",
-      "bracketSpacing": true,
-      "bracketSameLine": false
+			"bracketSpacing": true,
+			"bracketSameLine": false,
+			"quoteStyle": "single",
+			"attributePosition": "auto"
 		}
 	}
 }

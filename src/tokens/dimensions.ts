@@ -10,7 +10,7 @@ const dimensions = {
 	average: 32,
 	big: 36,
 	large: 40,
-	full: 80,
+	full: 80
 }
 
 export default dimensions

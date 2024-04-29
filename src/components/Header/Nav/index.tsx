@@ -1,10 +1,15 @@
-import { Nav } from './styles'
+import { Nav, NavItem, NavList } from './styles'
 
-export default function HeaderNav() {
+import { NavContent } from './types'
+
+export default function HeaderMenu({ content }: NavContent) {
 	return (
 		<Nav>
-			<div>nav</div>
-			Nav
+			<NavList>
+				{content.map((item) => (
+					<NavItem key={item.label}>{item.label}</NavItem>
+				))}
+			</NavList>
 		</Nav>
 	)
 }

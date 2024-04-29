@@ -1,6 +1,6 @@
 'use client'
 
-import { Wrapper, Content } from './styles'
+import { Content, Wrapper } from './styles'
 
 export default function Container({ children }: { children: React.ReactNode }) {
 	return (

@@ -1,0 +1,41 @@
+{
+	"home": {
+		"header": {
+			"logo": "Logo",
+			"nav": {
+				"aboutMe": {
+					"label": "Sobre Mim",
+					"href": "#"
+				},
+				"skills": {
+					"label": "Habilidades",
+					"href": "#"
+				},
+				"experiences": {
+					"label": "Experiências",
+					"href": "#"
+				},
+				"portifolio": {
+					"label": "Portifólio",
+					"href": "#"
+				},
+				"personalGoals": {
+					"label": "Objetivos Pessoais",
+					"href": "#"
+				}
+			},
+			"countrySwitch": {
+				"us": {
+					"flag": "/locales/us/us-flag.png",
+					"label": "Inglês",
+					"locale": "en-us"
+				},
+				"br": {
+					"flag": "/locales/br/br-flag.png",
+					"label": "Português",
+					"locale": "pt-br"
+				}
+			}
+		}
+	}
+}
