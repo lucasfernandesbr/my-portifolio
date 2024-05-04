@@ -1,4 +1,4 @@
-import dimensions from '@/tokens/dimensions'
+import { dimensions } from '@/tokens'
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
@@ -7,6 +7,7 @@ export const Nav = styled.nav`
 
 export const NavList = styled.ul`
   display: flex;
+  align-items: center;
   gap: ${dimensions.comfortable}px;
 
   list-style: none;

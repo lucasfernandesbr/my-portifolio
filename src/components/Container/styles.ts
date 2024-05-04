@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import breakpoints from '@/tokens/breakpoints'
+import { breakpoints, dimensions } from '@/tokens'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,4 +13,6 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   width: 100%;
   max-width: ${breakpoints.desktop}px;
+
+  padding: ${dimensions.none} ${dimensions.large}px;
 `

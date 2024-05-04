@@ -10,6 +10,7 @@ const dimensions = {
 	average: 32,
 	big: 36,
 	large: 40,
+	immense: 48,
 	full: 80
 }
 

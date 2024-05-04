@@ -1,14 +1,12 @@
 'use client'
 
-import Container from '../Container'
-
-import HeaderMenu from './Nav'
-
-import { HeaderParams } from './types'
+import Container from '@/components/Container'
 
 import CountrySwitch from './CountrySwitch'
+import HeaderMenu from './Nav'
 
 import { Wrapper } from './styles'
+import { HeaderParams } from './types'
 
 export default function Header({ content, locale }: HeaderParams) {
 	const { logo, nav, countrySwitch } = content
@@ -17,7 +15,7 @@ export default function Header({ content, locale }: HeaderParams) {
 		<header>
 			<Container>
 				<Wrapper>
-					<div>{logo}</div>
+					<img src="/common/logo.svg" alt="my-portifolio-logo" />
 					<HeaderMenu content={nav} />
 					<CountrySwitch content={countrySwitch} locale={locale} />
 				</Wrapper>

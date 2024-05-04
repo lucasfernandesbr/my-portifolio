@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 
+import Presentation from '@/components/sections/Presentation'
 import content from '../../content'
 
 type HomeParams = {
@@ -14,6 +15,7 @@ export default function Home({ params: { locale } }: HomeParams) {
 	return (
 		<>
 			<Header locale={locale} content={header} />
+			<Presentation />
 		</>
 	)
 }

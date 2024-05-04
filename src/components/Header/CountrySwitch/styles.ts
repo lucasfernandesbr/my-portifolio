@@ -1,5 +1,4 @@
-import colors from '@/tokens/colors'
-import dimensions from '@/tokens/dimensions'
+import { colors, dimensions } from '@/tokens'
 import styled from 'styled-components'
 
 export const CountrySwitchButton = styled.button`

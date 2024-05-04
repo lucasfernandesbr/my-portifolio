@@ -1,4 +1,3 @@
-import colors from '@/tokens/colors'
 import { CaretDown } from '@phosphor-icons/react'
 
 import { CountrySwitchButton, Flag } from './styles'
@@ -11,11 +10,9 @@ export default function CountrySwitch({
 	const [selectedCountry] = content.filter((item) => item.locale === locale)
 
 	return (
-		<>
-			<CountrySwitchButton>
-				<CaretDown size={12} color="white" />
-				<Flag src={selectedCountry.flag} alt="flag" />
-			</CountrySwitchButton>
-		</>
+		<CountrySwitchButton>
+			<CaretDown size={12} color="white" />
+			<Flag src={selectedCountry.flag} alt="flag" />
+		</CountrySwitchButton>
 	)
 }
