@@ -36,6 +36,13 @@
 					"locale": "pt-br"
 				}
 			}
+		},
+		"presentation": {
+			"title": "Lucas Fernandes Souza",
+			"text": "Knowledge in web development using javascript with React and NextJs delivering quality and resilience.",
+			"tag": {
+				"content": "Frontend Developer"
+			}
 		}
 	}
 }

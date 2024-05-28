@@ -44,6 +44,13 @@ export default function content() {
 			logo: t('header.logo'),
 			nav,
 			countrySwitch
+		},
+		presentation: {
+			title: t('presentation.title'),
+			text: t('presentation.text'),
+			tag: {
+				content: t('presentation.tag.content')
+			}
 		}
 	}
 }

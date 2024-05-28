@@ -10,12 +10,12 @@ type HomeParams = {
 }
 
 export default function Home({ params: { locale } }: HomeParams) {
-	const { header } = content()
+	const { header, presentation } = content()
 
 	return (
 		<>
 			<Header locale={locale} content={header} />
-			<Presentation />
+			<Presentation content={presentation} />
 		</>
 	)
 }

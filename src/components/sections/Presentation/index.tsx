@@ -8,19 +8,20 @@ import Tag from '@/components/Tag'
 
 import { Img, PresentationContent, Wrapper } from './styles'
 
-export default function Presentation() {
+import { PresentationProps } from './types'
+
+export default function Presentation({ content }: PresentationProps) {
+	const { title, text, tag } = content
+
 	return (
 		<Container>
 			<Wrapper>
 				<PresentationContent>
-					<Title>Lucas Fernandes Souza</Title>
+					<Title>{title}</Title>
 
-					<Tag content="Frontend Developer" />
+					<Tag content={tag.content} />
 
-					<Text>
-						Knowledge in web development using javascript with React and NextJs
-						delivering quality and resilience.
-					</Text>
+					<Text>{text}</Text>
 
 					<SocialMedia />
 				</PresentationContent>
