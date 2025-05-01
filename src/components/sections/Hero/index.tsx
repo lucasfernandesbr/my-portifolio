@@ -1,0 +1,55 @@
+import { ArrowDown, GitHub, Linkedin } from 'react-feather'
+
+import Container from '@/components/shared/Atoms/Container'
+import Text from '@/components/shared/Atoms/Text'
+
+const Hero: React.FC = () => {
+  return (
+    <Container>
+      <div className="flex w-full flex-col gap-12 pt-20 pb-20">
+        <div className="flex items-center">
+          <div className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full" />
+          <div className="bg-support-02 mr-2 h-[8px] w-[8px] rounded-full" />
+          <Text className="text-xs font-semibold uppercase">Ready to code</Text>
+        </div>
+
+        <h1 className="text-brand-black text-7xl font-extrabold">
+          Knowledge in Javascript web development using React and Next.js
+          delivering quality and resilience.
+        </h1>
+
+        <div className="flex gap-4">
+          <div>
+            <button
+              type="button"
+              className="bg-brand-black text-brand-white flex h-[40px] items-center justify-center gap-1 rounded-lg p-3"
+            >
+              Scroll Down
+              <ArrowDown />
+            </button>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
+            >
+              <GitHub size={20} color="#48494F" />
+            </button>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
+            >
+              <Linkedin size={20} color="#48494F" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  )
+}
+
+export default Hero
