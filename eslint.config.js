@@ -67,6 +67,7 @@ export default [
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
+      'react-refresh/only-export-components': 'off',
     },
     settings: {
       react: {

@@ -1,47 +1,38 @@
-import { GitHub, Linkedin } from 'react-feather'
-
 import Container from '../../Atoms/Container'
+import Icon from '../../Molecules/Icon'
+import { FooterProps } from './types'
 
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterProps> = ({ content }) => {
+  const { nav, socials, copyright } = content
+
   return (
     <Container>
       <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
         <div className="flex w-full items-center justify-between">
           <ul className="flex gap-14">
-            <li>About me</li>
-            <li>Skills</li>
-            <li>Experiences</li>
-            <li>Portifolio</li>
-            <li>Personal goals</li>
+            {nav.map(({ label }) => (
+              <li>{label}</li>
+            ))}
           </ul>
 
           <ul className="flex gap-8">
-            <li>
-              <div>
-                <button
-                  type="button"
+            {socials.map(({ href, icon }) => (
+              <li>
+                <a
                   className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
+                  href={href}
+                  target="_blank"
                 >
-                  <GitHub size={20} color="#48494F" />
-                </button>
-              </div>
-            </li>
-            <li>
-              <div>
-                <button
-                  type="button"
-                  className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
-                >
-                  <Linkedin size={20} color="#48494F" />
-                </button>
-              </div>
-            </li>
+                  <Icon type={icon} size={20} color="#48494F" />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="h-[1px] w-full bg-neutral-200" />
 
-        <p>© 2025 Lucas Fernandes Souza. All rights reserved.</p>
+        <p>{copyright}</p>
       </div>
     </Container>
   )

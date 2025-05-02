@@ -1,14 +1,17 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { RouterProvider } from 'react-router-dom'
 
+import CountrySwitch from './contexts/CountrySwitch'
 import router from './routes'
 
 function App() {
   return (
     <HelmetProvider>
-      <Helmet title="Lucas Fernandes Souza | My Portifolio" />
+      <CountrySwitch>
+        <Helmet title="Lucas Fernandes Souza | My Portifolio" />
 
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
+      </CountrySwitch>
     </HelmetProvider>
   )
 }
