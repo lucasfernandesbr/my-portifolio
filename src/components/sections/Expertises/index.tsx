@@ -1,5 +1,5 @@
-import Container from '@/components/shared/Atoms/Container'
-import Text from '@/components/shared/Atoms/Text'
+import Container from '@Atoms/Container'
+import Text from '@Atoms/Text'
 
 import { ExpertisesProps } from './types'
 

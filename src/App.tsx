@@ -1,7 +1,8 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { RouterProvider } from 'react-router-dom'
 
-import CountrySwitch from './contexts/CountrySwitch'
+import CountrySwitch from '@contexts/CountrySwitch'
+
 import router from './routes'
 
 function App() {

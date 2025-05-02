@@ -1,4 +1,4 @@
-import { IconName } from '@/components/shared/Molecules/Icon'
+import { IconName } from '@Atoms/Icon'
 
 type introductionCard = {
   title?: string

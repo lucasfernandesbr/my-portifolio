@@ -1,12 +1,11 @@
-import { Award, Briefcase, ChevronDown } from 'react-feather'
-
-import Container from '@/components/shared/Atoms/Container'
-import Text from '@/components/shared/Atoms/Text'
+import Container from '@Atoms/Container'
+import Icon from '@Atoms/Icon'
+import Text from '@Atoms/Text'
 
 import { JourneysProps } from './types'
 
 const Journeys: React.FC<JourneysProps> = ({ content }) => {
-  const { title, description, professional, academic } = content
+  const { title, description, button, professional, academic } = content
 
   return (
     <Container>
@@ -20,7 +19,8 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
         <div id="journeys" className="flex flex-col gap-20">
           <div className="flex w-full flex-col gap-8">
             <div className="flex items-center gap-4">
-              <Briefcase />
+              <Icon type={professional.icon} />
+
               <Text className="text-3xl font-semibold">
                 {professional.title}
               </Text>
@@ -36,7 +36,6 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
                       </Text>
 
                       <div className="flex items-center gap-3">
-                        {/* <div className="bg-gray-30 mr-2 h-[8px] w-[8px] rounded-full" /> */}
                         <Text className="text-gray-80 font-medium">
                           {description}
                         </Text>
@@ -51,9 +50,9 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
 
                     <div className="flex items-center gap-3">
                       <Text className="text-brand-black font-semibold">
-                        Show Details
+                        {button.label}
                       </Text>
-                      <ChevronDown />
+                      <Icon type={button.icon} />
                     </div>
                   </li>
                 ),
@@ -63,7 +62,8 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
 
           <div className="flex w-full flex-col gap-8">
             <div className="flex items-center gap-4">
-              <Award />
+              <Icon type={academic.icon} />
+
               <Text className="text-3xl font-semibold">{academic.title}</Text>
             </div>
 
@@ -74,7 +74,6 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
                     <Text className="text-2xl font-semibold">{college}</Text>
 
                     <div className="flex items-center gap-3">
-                      {/* <div className="bg-gray-30 mr-2 h-[8px] w-[8px] rounded-full" /> */}
                       <Text className="text-gray-80 font-medium">
                         {description}
                       </Text>
@@ -87,9 +86,9 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
 
                   <div className="flex items-center gap-3">
                     <Text className="text-brand-black font-semibold">
-                      Show Details
+                      {button.label}
                     </Text>
-                    <ChevronDown />
+                    <Icon type={button.icon} />
                   </div>
                 </li>
               ))}

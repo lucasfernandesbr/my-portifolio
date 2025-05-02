@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ComponentBaseProps } from '@/types'
+import { ComponentBaseProps } from '@/types/global'
 
 const Container: React.FC<ComponentBaseProps> = ({ children, className }) => {
   return (

@@ -2,7 +2,7 @@ import { Country } from '@/types/global'
 
 export type ContextType = {
   country: Country
-  toggleCountry: () => void
+  toggleCountry: (_country: Country) => void
 }
 
 export type ProviderProps = {

@@ -1,5 +1,6 @@
-import Container from '../../Atoms/Container'
-import Icon from '../../Molecules/Icon'
+import Container from '@Atoms/Container'
+import Icon from '@Atoms/Icon'
+
 import { FooterProps } from './types'
 
 const Footer: React.FC<FooterProps> = ({ content }) => {

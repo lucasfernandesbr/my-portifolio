@@ -18,7 +18,15 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@locales/*": ["./src/locales/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@locales/*": ["./src/locales/*"],
+      "@/types/*": ["./src/types/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@sections/*": ["./src/components/sections/*"],
+      "@Atoms/*": ["./src/components/shared/Atoms/*"],
+      "@Molecules/*": ["./src/components/shared/Molecules/*"],
+      "@Organisms/*": ["./src/components/shared/Organisms/*"]
     }
   },
   "include": ["vite.config.ts"]

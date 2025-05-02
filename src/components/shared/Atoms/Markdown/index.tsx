@@ -1,5 +1,5 @@
-import DOMPurify from 'dompurify'
 import ReactMarkdown from 'react-markdown'
+import DOMPurify from 'dompurify'
 import rehypeRaw from 'rehype-raw'
 
 export type MarkdownProps = {

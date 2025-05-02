@@ -1,5 +1,6 @@
 export default {
   header: {
+    logo: 'GitPullRequest',
     nav: [
       {
         label: 'About me',
@@ -14,9 +15,12 @@ export default {
         label: 'FAQ',
       },
     ],
-    flag: {
-      src: '/images/us/flag.png',
-      alt: 'flag_us',
+    mode_switch: {
+      dark: 'Moon',
+    },
+    countries: {
+      us: { src: '/images/us/flag.png', alt: 'flag_us', label: 'English' },
+      br: { src: '/images/br/flag.png', alt: 'flag_br', label: 'Portuguese' },
     },
   },
   hero: {
@@ -32,7 +36,7 @@ export default {
       },
       socials: [
         {
-          icon: 'GitHub',
+          icon: 'Github',
           href: 'https://github.com/lucasfernandesbr',
         },
         {
@@ -136,6 +140,7 @@ export default {
     },
     professional: {
       title: 'Professional',
+      icon: 'Briefcase',
       journey: [
         {
           company_name: 'Wellhub',
@@ -151,6 +156,7 @@ export default {
     },
     academic: {
       title: 'Academic',
+      icon: 'Award',
       journey: [
         {
           college: 'Rocketseat',
@@ -212,7 +218,7 @@ export default {
     ],
     socials: [
       {
-        icon: 'GitHub',
+        icon: 'Github',
         href: 'https://github.com/lucasfernandesbr',
       },
       {

@@ -1,5 +1,6 @@
 export default {
   header: {
+    logo: 'GitPullRequest',
     nav: [
       {
         label: 'Sobre mim',
@@ -14,9 +15,12 @@ export default {
         label: 'Perguntas',
       },
     ],
-    flag: {
-      src: '/images/br/flag.png',
-      alt: 'flag_br',
+    mode_switch: {
+      dark: 'Moon',
+    },
+    countries: {
+      us: { src: '/images/us/flag.png', alt: 'flag_us', label: 'Inglês' },
+      br: { src: '/images/br/flag.png', alt: 'flag_br', label: 'Português' },
     },
   },
   hero: {
@@ -32,7 +36,7 @@ export default {
       },
       socials: [
         {
-          icon: 'GitHub',
+          icon: 'Github',
           href: 'https://github.com/lucasfernandesbr',
         },
         {
@@ -188,7 +192,7 @@ export default {
     ],
     socials: [
       {
-        icon: 'GitHub',
+        icon: 'Github',
         href: 'https://github.com/lucasfernandesbr',
       },
       {

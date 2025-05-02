@@ -1,11 +1,11 @@
-import Container from '@/components/shared/Atoms/Container'
-import Text from '@/components/shared/Atoms/Text'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/shared/Organisms/Accordion'
+} from '@Atoms/Accordion'
+import Container from '@Atoms/Container'
+import Text from '@Atoms/Text'
 
 import { FaqProps } from './types'
 

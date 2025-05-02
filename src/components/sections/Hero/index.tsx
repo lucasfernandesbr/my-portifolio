@@ -1,7 +1,7 @@
-import Container from '@/components/shared/Atoms/Container'
-import Text from '@/components/shared/Atoms/Text'
-import Icon from '@/components/shared/Molecules/Icon'
-import Markdown from '@/components/shared/Molecules/Markdown'
+import Container from '@Atoms/Container'
+import Icon from '@Atoms/Icon'
+import Markdown from '@Atoms/Markdown'
+import Text from '@Atoms/Text'
 
 import { HeroProps } from './types'
 

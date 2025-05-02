@@ -1,5 +1,3 @@
-import tseslint from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
 import eslintPluginJSXAccessibility from 'eslint-plugin-jsx-a11y'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginReact from 'eslint-plugin-react'
@@ -7,6 +5,9 @@ import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginReactRefresh from 'eslint-plugin-react-refresh'
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
 import globals from 'globals'
+
+import tseslint from '@typescript-eslint/eslint-plugin'
+import tsParser from '@typescript-eslint/parser'
 
 export default [
   {
@@ -65,7 +66,23 @@ export default [
         },
       ],
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'simple-import-sort/imports': 'error',
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [
+            ['^react', '^next', '^[a-z]', '@radix-ui'],
+            ['^@'],
+            ['^@lib'],
+            ['^@locales'],
+            ['^@types'],
+            ['^@contexts'],
+            ['^@hooks'],
+            ['^@sections'],
+            ['^@Atoms', '^@Molecules', '^@Organisms'],
+            ['^\\.'],
+          ],
+        },
+      ],
       'simple-import-sort/exports': 'error',
       'react-refresh/only-export-components': 'off',
     },

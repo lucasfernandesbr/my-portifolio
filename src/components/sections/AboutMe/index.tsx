@@ -1,5 +1,5 @@
-import Container from '@/components/shared/Atoms/Container'
-import Markdown from '@/components/shared/Molecules/Markdown'
+import Container from '@Atoms/Container'
+import Markdown from '@Atoms/Markdown'
 
 import { AboutMeProps } from './types'
 

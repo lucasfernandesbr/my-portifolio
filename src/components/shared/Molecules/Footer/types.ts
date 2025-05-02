@@ -1,4 +1,4 @@
-import { IconName } from '../../Molecules/Icon'
+import { IconName } from '@Atoms/Icon'
 
 type FooterAnchor = {
   href: string

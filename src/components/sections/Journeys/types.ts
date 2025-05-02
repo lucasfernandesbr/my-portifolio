@@ -1,4 +1,4 @@
-import { IconName } from '@/components/shared/Molecules/Icon'
+import { IconName } from '@Atoms/Icon'
 
 type JourneyButton = {
   label: string
@@ -23,10 +23,12 @@ export type JourneysContent = {
   button: JourneyButton
   professional: {
     title: string
+    icon: IconName
     journey: AcademicProfessional[]
   }
   academic: {
     title: string
+    icon: IconName
     journey: AcademicJourney[]
   }
 }

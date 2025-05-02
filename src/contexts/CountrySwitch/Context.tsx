@@ -1,10 +1,8 @@
-// CountryContext.tsx
 import { createContext, useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Country } from '@/types/global'
 
-// import i18n from '../path/para/seu/i18n' // ajuste o path certinho
 import { ContextType, ProviderProps } from './types'
 
 const CountryContext = createContext<ContextType>({} as ContextType)
@@ -14,10 +12,9 @@ export const Provider = ({ children }: ProviderProps) => {
 
   const { i18n } = useTranslation()
 
-  const toggleCountry = () => {
-    const newCountry = country === 'us' ? 'br' : 'us'
-    setCountry(newCountry)
-    i18n.changeLanguage(newCountry === 'us' ? 'us' : 'br')
+  const toggleCountry = (country: Country) => {
+    setCountry(country)
+    i18n.changeLanguage(country)
   }
 
   return (

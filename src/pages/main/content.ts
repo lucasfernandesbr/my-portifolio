@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next'
 
-import { AboutMeContent } from '@/components/sections/AboutMe/types'
-import { ExpertisesContent } from '@/components/sections/Expertises/types'
-import { FaqContent } from '@/components/sections/Faq/types'
-import { HeroContent } from '@/components/sections/Hero/types'
-import { IntroductionContent } from '@/components/sections/Introduction/types'
-import { JourneysContent } from '@/components/sections/Journeys/types'
-import { FooterContent } from '@/components/shared/Organisms/Footer/types'
-import { HeaderContent } from '@/components/shared/Organisms/Header/types'
+import { AboutMeContent } from '@sections/AboutMe/types'
+import { ExpertisesContent } from '@sections/Expertises/types'
+import { FaqContent } from '@sections/Faq/types'
+import { HeroContent } from '@sections/Hero/types'
+import { IntroductionContent } from '@sections/Introduction/types'
+import { JourneysContent } from '@sections/Journeys/types'
+
+import { FooterContent } from '@Molecules/Footer/types'
+import { HeaderContent } from '@Organisms/Header/types'
 
 type Content = {
   header: HeaderContent

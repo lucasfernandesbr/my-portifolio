@@ -1,18 +1,16 @@
-import { ChevronDown, GitPullRequest, Moon } from 'react-feather'
+import Container from '@Atoms/Container'
+import Icon from '@Atoms/Icon'
+import CountrySwitch from '@Molecules/CountrySwitch'
 
-import { useCountrySwitch } from '@/contexts/CountrySwitch'
-
-import Container from '../../Atoms/Container'
 import { HeaderProps } from './types'
 
 const Header: React.FC<HeaderProps> = ({ content }) => {
-  const { toggleCountry } = useCountrySwitch()
-  const { nav, flag } = content
+  const { logo, nav, mode_switch, countries } = content
 
   return (
     <Container>
       <div className="flex h-[88px] w-full items-center justify-between">
-        <GitPullRequest />
+        <Icon type={logo} color="#212227" />
 
         <ul className="flex gap-14">
           {nav.map(({ label }) => (
@@ -22,17 +20,10 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
 
         <ul className="flex gap-8">
           <li>
-            <Moon />
+            <Icon type={mode_switch.dark} color="#212227" />
           </li>
           <li>
-            <button className="flex items-center gap-2" onClick={toggleCountry}>
-              <ChevronDown size={16} />
-              <img
-                className="h-[24px] w-[24px]"
-                src={flag.src}
-                alt={flag.alt}
-              />
-            </button>
+            <CountrySwitch icon="ChevronDown" countries={countries} />
           </li>
         </ul>
       </div>
