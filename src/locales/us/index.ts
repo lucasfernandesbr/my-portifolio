@@ -19,8 +19,16 @@ export default {
       dark: 'Moon',
     },
     countries: {
-      us: { src: '/images/us/flag.png', alt: 'flag_us', label: 'English' },
-      br: { src: '/images/br/flag.png', alt: 'flag_br', label: 'Portuguese' },
+      us: {
+        src: '/images/country/us/flag.webp',
+        alt: 'United States flag',
+        label: 'English',
+      },
+      br: {
+        src: '/images/country/br/flag.webp',
+        alt: 'Brazil flag',
+        label: 'Portuguese',
+      },
     },
   },
   hero: {
@@ -67,6 +75,10 @@ export default {
     ],
   },
   about_me: {
+    img: {
+      src: '/images/commons/about_me.webp',
+      alt: 'Portrait of Lucas Fernandes Souza',
+    },
     title: 'A Bit About Me',
     content: `i’m a Front-End Developer with over 3 years of experience,
               specializing in React and Next.js. Lorem Ipsum has been the
@@ -92,37 +104,52 @@ export default {
                   Ipsum.`,
     techs: [
       {
-        src: '',
+        src: '/images/commons/techs/javascript.svg',
+        alt: 'JavaScript',
       },
       {
-        src: '',
+        src: '/images/commons/techs/typescript.svg',
+        alt: 'TypeScript',
       },
       {
-        src: '',
+        src: '/images/commons/techs/react.svg',
+        alt: 'React',
       },
       {
-        src: '',
+        src: '/images/commons/techs/nextjs.svg',
+        alt: 'Next.js',
       },
       {
-        src: '',
+        src: '/images/commons/techs/nodejs.svg',
+        alt: 'Node.js',
       },
       {
-        src: '',
+        src: '/images/commons/techs/prisma.svg',
+        alt: 'Prisma',
       },
       {
-        src: '',
+        src: '/images/commons/techs/tailwind.svg',
+        alt: 'Tailwind CSS',
       },
       {
-        src: '',
+        src: '/images/commons/techs/styled-components.svg',
+        alt: 'Styled Components',
       },
       {
-        src: '',
+        src: '/images/commons/techs/storybook.svg',
+        alt: 'Storybook',
       },
       {
-        src: '',
+        src: '/images/commons/techs/jest.svg',
+        alt: 'Jest',
       },
       {
-        src: '',
+        src: '/images/commons/techs/cypress.svg',
+        alt: 'Cypress',
+      },
+      {
+        src: '/images/commons/techs/playwright.svg',
+        alt: 'Playwright',
       },
     ],
   },

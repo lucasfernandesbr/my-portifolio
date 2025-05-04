@@ -18,8 +18,10 @@ const Expertises: React.FC<ExpertisesProps> = ({ content }) => {
         <div className="border-gray-30 border-b" />
 
         <ul className="flex w-full justify-between">
-          {techs.map((_) => (
-            <li className="bg-brand-black h-10 w-10 rounded-sm" />
+          {techs.map(({ src, alt }) => (
+            <li className="flex h-10 items-center rounded-sm">
+              <img className="h-full" src={src} alt={alt} />
+            </li>
           ))}
         </ul>
       </div>
