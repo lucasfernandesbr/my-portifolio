@@ -39,7 +39,7 @@ export default {
       'Desenvolvedor web com sólida experiência em JavaScript, especializado em React e Next.js. Focado na entrega de soluções digitais confiáveis e de alta qualidade.',
     buttons: {
       scroll_down: {
-        label: 'Role para baixo',
+        label: 'Veja mais',
         icon: 'ArrowDown',
       },
       socials: [
