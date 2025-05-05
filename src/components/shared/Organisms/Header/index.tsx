@@ -1,3 +1,4 @@
+import Anchor from '@Atoms/Anchor'
 import Container from '@Atoms/Container'
 import Icon from '@Atoms/Icon'
 import CountrySwitch from '@Molecules/CountrySwitch'
@@ -14,7 +15,9 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
 
         <ul className="flex gap-14">
           {nav.map(({ label }) => (
-            <li>{label}</li>
+            <li>
+              <Anchor label={label} />
+            </li>
           ))}
         </ul>
 

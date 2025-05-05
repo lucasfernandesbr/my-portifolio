@@ -1,5 +1,5 @@
+import Anchor from '@Atoms/Anchor'
 import Container from '@Atoms/Container'
-import Icon from '@Atoms/Icon'
 
 import { FooterProps } from './types'
 
@@ -12,26 +12,22 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
         <div className="flex w-full items-center justify-between">
           <ul className="flex gap-14">
             {nav.map(({ label }) => (
-              <li>{label}</li>
+              <li>
+                <Anchor label={label} />
+              </li>
             ))}
           </ul>
 
           <ul className="flex gap-8">
             {socials.map(({ href, icon }) => (
               <li>
-                <a
-                  className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
-                  href={href}
-                  target="_blank"
-                >
-                  <Icon type={icon} size={20} color="#48494F" />
-                </a>
+                <Anchor href={href} icon={icon} variant="socialMedia" />
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="h-[1px] w-full bg-neutral-200" />
+        <div className="bg-gray-20 h-[1px] w-full" />
 
         <p>{copyright}</p>
       </div>

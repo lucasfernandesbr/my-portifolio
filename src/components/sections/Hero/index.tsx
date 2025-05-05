@@ -1,5 +1,5 @@
+import Anchor from '@Atoms/Anchor'
 import Container from '@Atoms/Container'
-import Icon from '@Atoms/Icon'
 import Markdown from '@Atoms/Markdown'
 import Text from '@Atoms/Text'
 
@@ -24,24 +24,14 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         </h1>
 
         <div className="flex gap-4">
-          <button
-            type="button"
-            className="bg-brand-black text-brand-white flex h-[40px] items-center justify-center gap-1 rounded-lg p-3"
-          >
-            {buttons.scroll_down.label}
-            {buttons.scroll_down.icon && (
-              <Icon type={buttons.scroll_down.icon} />
-            )}
-          </button>
+          <Anchor
+            label={buttons.scroll_down.label}
+            icon={buttons.scroll_down.icon}
+            variant="button"
+          />
 
           {buttons.socials.map(({ href, icon }) => (
-            <a
-              className="bg-gray-20 flex h-[40px] w-[40px] items-center justify-center rounded-lg"
-              href={href}
-              target="_blank"
-            >
-              <Icon type={icon} size={20} color="#48494F" />
-            </a>
+            <Anchor href={href} icon={icon} variant="socialMedia" />
           ))}
         </div>
       </div>

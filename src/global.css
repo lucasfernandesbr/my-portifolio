@@ -14,9 +14,13 @@
   --gray-10: #F3F3F3;
   --gray-20: #E9EBEC;
   --gray-30: #D4D6DB;
-  --gray-80: #48494F;
-  --gray-90: #36373C;
-  --gray-100: #1F2025;
+  --gray-40: #A3A7B1;
+  --gray-50: #71757E;
+  --gray-60: #595B63;
+  --gray-70: #48494F;
+  --gray-80: #36373C;
+  --gray-90: #1F2025;
+  --gray-100: #111111;
   --support-01: #2970FF;
   --support-02: #47CD89;
   /* --font-7xl: 8.0rem;
@@ -98,6 +102,10 @@
   --color-gray-10: var(--gray-10);
   --color-gray-20: var(--gray-20);
   --color-gray-30: var(--gray-30);
+  --color-gray-40: var(--gray-40);
+  --color-gray-50: var(--gray-50);
+  --color-gray-60: var(--gray-60);
+  --color-gray-70: var(--gray-70);
   --color-gray-80: var(--gray-80);
   --color-gray-90: var(--gray-90);
   --color-gray-100: var(--gray-100);

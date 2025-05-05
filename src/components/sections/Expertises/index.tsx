@@ -15,7 +15,7 @@ const Expertises: React.FC<ExpertisesProps> = ({ content }) => {
           <Text className="text-justify">{description}</Text>
         </div>
 
-        <div className="border-gray-30 border-b" />
+        <div className="border-gray-20 border-b" />
 
         <ul className="flex w-full justify-between">
           {techs.map(({ src, alt }) => (
