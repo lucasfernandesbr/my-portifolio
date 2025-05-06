@@ -4,10 +4,10 @@ import Text from '@Atoms/Text'
 import { ExpertisesProps } from './types'
 
 const Expertises: React.FC<ExpertisesProps> = ({ content }) => {
-  const { title, description, techs } = content
+  const { id, title, description, techs } = content
 
   return (
-    <Container>
+    <Container id={id}>
       <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
         <div className="flex flex-col gap-10">
           <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>

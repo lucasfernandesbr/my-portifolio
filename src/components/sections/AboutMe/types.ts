@@ -1,4 +1,5 @@
 export type AboutMeContent = {
+  id: string
   img: {
     src: string
     alt: string

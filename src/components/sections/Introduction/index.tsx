@@ -5,10 +5,10 @@ import Text from '@Atoms/Text'
 import { IntroductionProps } from './types'
 
 const Introduction: React.FC<IntroductionProps> = ({ content }) => {
-  const { cards } = content
+  const { id, cards } = content
 
   return (
-    <Container>
+    <Container id={id}>
       <div className="pt-20 pb-20">
         <ul className="flex w-full flex-row items-center justify-between">
           {cards.map(({ title, icon, content }) => (

@@ -10,10 +10,10 @@ import Text from '@Atoms/Text'
 import { FaqProps } from './types'
 
 const Faq: React.FC<FaqProps> = ({ content }) => {
-  const { title, questions } = content
+  const { id, title, questions } = content
 
   return (
-    <Container>
+    <Container id={id}>
       <div className="flex w-full flex-col justify-between gap-10 pt-[80px] pb-[80px]">
         <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
 

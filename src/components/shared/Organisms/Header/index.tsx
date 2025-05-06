@@ -1,3 +1,5 @@
+import { scrollToId } from '@/utils/scrollToId'
+
 import Anchor from '@Atoms/Anchor'
 import Container from '@Atoms/Container'
 import Icon from '@Atoms/Icon'
@@ -14,9 +16,14 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
         <Icon type={logo} color="#212227" />
 
         <ul className="flex gap-14">
-          {nav.map(({ label }) => (
+          {nav.map(({ id, label }) => (
             <li>
-              <Anchor label={label} />
+              <Anchor
+                label={label}
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+                  scrollToId(e, id)
+                }
+              />
             </li>
           ))}
         </ul>

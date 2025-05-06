@@ -1,3 +1,5 @@
+import { scrollToId } from '@/utils/scrollToId'
+
 import Anchor from '@Atoms/Anchor'
 import Container from '@Atoms/Container'
 
@@ -11,9 +13,14 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
       <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
         <div className="flex w-full items-center justify-between">
           <ul className="flex gap-14">
-            {nav.map(({ label }) => (
+            {nav.map(({ id, label }) => (
               <li>
-                <Anchor label={label} />
+                <Anchor
+                  label={label}
+                  onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+                    scrollToId(e, id)
+                  }
+                />
               </li>
             ))}
           </ul>

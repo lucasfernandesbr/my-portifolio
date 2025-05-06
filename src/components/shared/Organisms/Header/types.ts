@@ -12,9 +12,14 @@ type ModeSwitch = {
   dark: IconName
 }
 
+type NavItem = {
+  id: string
+  label: string
+}
+
 export type HeaderContent = {
   logo: IconName
-  nav: Array<{ label: string }>
+  nav: NavItem[]
   mode_switch: ModeSwitch
   countries: Record<Country, CountryFlag>
 }

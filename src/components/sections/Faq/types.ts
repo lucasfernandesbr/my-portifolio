@@ -4,6 +4,7 @@ type FaqQuestion = {
 }
 
 export type FaqContent = {
+  id: string
   title: string
   questions: FaqQuestion[]
 }

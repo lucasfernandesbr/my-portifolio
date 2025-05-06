@@ -4,6 +4,7 @@ type Tech = {
 }
 
 export type ExpertisesContent = {
+  id: string
   title: string
   description: string
   techs: Tech[]

@@ -5,8 +5,13 @@ type FooterAnchor = {
   icon: IconName
 }
 
+type NavItem = {
+  id: string
+  label: string
+}
+
 export type FooterContent = {
-  nav: Array<{ label: string }>
+  nav: NavItem[]
   socials: FooterAnchor[]
   copyright: string
 }

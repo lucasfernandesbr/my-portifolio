@@ -3,15 +3,19 @@ export default {
     logo: 'GitPullRequest',
     nav: [
       {
+        id: 'about_me',
         label: 'About me',
       },
       {
+        id: 'expertises',
         label: 'My Skills & Experiences',
       },
       {
+        id: 'journeys',
         label: 'Professional & Academic journeys',
       },
       {
+        id: 'faq',
         label: 'FAQ',
       },
     ],
@@ -32,7 +36,12 @@ export default {
     },
   },
   hero: {
+    id: 'hero',
     ready_online: {
+      avatar: {
+        src: '/images/commons/about_me.webp',
+        alt: 'Portrait of Lucas Fernandes Souza',
+      },
       label: 'Ready to code',
     },
     title:
@@ -41,6 +50,7 @@ export default {
       scroll_down: {
         label: 'Scroll Down',
         icon: 'ArrowDown',
+        href: 'introduction',
       },
       socials: [
         {
@@ -55,6 +65,7 @@ export default {
     },
   },
   introduction: {
+    id: 'introduction',
     cards: [
       {
         title: '3+',
@@ -75,6 +86,7 @@ export default {
     ],
   },
   about_me: {
+    id: 'about_me',
     img: {
       src: '/images/commons/about_me.webp',
       alt: 'Portrait of Lucas Fernandes Souza',
@@ -95,6 +107,7 @@ export default {
               making it over 2000 years old.`,
   },
   expertises: {
+    id: 'expertises',
     title: 'My Skills & Expertises',
     description: `It has survived not only five centuries, but also the leap into
                   electronic typesetting, remaining essentially unchanged. It was
@@ -154,6 +167,7 @@ export default {
     ],
   },
   journeys: {
+    id: 'journeys',
     title: 'My Journeys',
     description: `It has survived not only five centuries, but also the leap into
                   electronic typesetting, remaining essentially unchanged. It was
@@ -199,6 +213,7 @@ export default {
     },
   },
   faq: {
+    id: 'faq',
     title: 'A Few Questions About Me',
     questions: [
       {
@@ -229,17 +244,26 @@ export default {
     ],
   },
   footer: {
+    id: 'footer',
     nav: [
       {
+        id: 'hero',
+        label: 'Hero',
+      },
+      {
+        id: 'about_me',
         label: 'About me',
       },
       {
+        id: 'expertises',
         label: 'My Skills & Experiences',
       },
       {
+        id: 'journeys',
         label: 'Professional & Academic journeys',
       },
       {
+        id: 'faq',
         label: 'FAQ',
       },
     ],

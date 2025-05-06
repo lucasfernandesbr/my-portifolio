@@ -3,15 +3,19 @@ export default {
     logo: 'GitPullRequest',
     nav: [
       {
+        id: 'about_me',
         label: 'Sobre mim',
       },
       {
+        id: 'expertises',
         label: 'Minhas Habilidades & Experiências',
       },
       {
+        id: 'journeys',
         label: 'Jornadas Profissionais & Acadêmicas',
       },
       {
+        id: 'faq',
         label: 'Perguntas',
       },
     ],
@@ -32,7 +36,12 @@ export default {
     },
   },
   hero: {
+    id: 'hero',
     ready_online: {
+      avatar: {
+        src: '/images/commons/about_me.webp',
+        alt: 'Portrait of Lucas Fernandes Souza',
+      },
       label: 'Pronto para codar',
     },
     title:
@@ -41,6 +50,7 @@ export default {
       scroll_down: {
         label: 'Veja mais',
         icon: 'ArrowDown',
+        href: 'introduction',
       },
       socials: [
         {
@@ -55,6 +65,7 @@ export default {
     },
   },
   introduction: {
+    id: 'introduction',
     cards: [
       {
         title: '3+',
@@ -75,6 +86,7 @@ export default {
     ],
   },
   about_me: {
+    id: 'about_me',
     img: {
       src: '/images/commons/about_me.webp',
       alt: 'Retrato de Lucas Fernandes Souza',
@@ -95,6 +107,7 @@ export default {
               de 2000 anos de idade.`,
   },
   expertises: {
+    id: 'expertises',
     title: 'Minhas Habilidades & Especialidades',
     description: `Sobreviveu não apenas a cinco séculos, mas também à transição para
                   a editoração eletrônica, permanecendo essencialmente inalterado. Foi
@@ -153,6 +166,7 @@ export default {
     ],
   },
   journeys: {
+    id: 'journeys',
     title: 'Minhas Jornadas',
     description: `Sobreviveu não apenas a cinco séculos, mas também à transição para
                   a editoração eletrônica, permanecendo essencialmente inalterado. Foi
@@ -195,6 +209,7 @@ export default {
     },
   },
   faq: {
+    id: 'faq',
     title: 'Algumas Perguntas Sobre Mim',
     questions: [
       {
@@ -225,17 +240,26 @@ export default {
     ],
   },
   footer: {
+    id: 'footer',
     nav: [
       {
+        id: 'hero',
+        label: 'Hero',
+      },
+      {
+        id: 'about_me',
         label: 'Sobre mim',
       },
       {
+        id: 'expertises',
         label: 'Minhas Habilidades & Experiências',
       },
       {
+        id: 'journeys',
         label: 'Jornadas Profissionais & Acadêmicas',
       },
       {
+        id: 'faq',
         label: 'Perguntas',
       },
     ],

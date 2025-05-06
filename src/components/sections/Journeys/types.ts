@@ -18,6 +18,7 @@ type AcademicJourney = {
 }
 
 export type JourneysContent = {
+  id: string
   title: string
   description: string
   button: JourneyButton

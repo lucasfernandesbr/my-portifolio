@@ -4,10 +4,10 @@ import Markdown from '@Atoms/Markdown'
 import { AboutMeProps } from './types'
 
 const AboutMe: React.FC<AboutMeProps> = ({ content }) => {
-  const { img, title, content: about_me } = content
+  const { id, img, title, content: about_me } = content
 
   return (
-    <Container>
+    <Container id={id}>
       <div className="flex w-full items-center justify-between pt-20 pb-20">
         <img
           src={img.src}

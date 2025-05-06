@@ -2,6 +2,7 @@ import { IconName } from '@Atoms/Icon'
 
 type HeroButton = {
   label: string
+  href: string
   icon?: IconName
 }
 
@@ -10,10 +11,17 @@ type HeroAnchor = {
   icon: IconName
 }
 
-export type HeroContent = {
-  ready_online: {
-    label: string
+type ReadyOnline = {
+  avatar: {
+    src: string
+    alt: string
   }
+  label: string
+}
+
+export type HeroContent = {
+  id: string
+  ready_online: ReadyOnline
   title: string
   buttons: {
     scroll_down: HeroButton
