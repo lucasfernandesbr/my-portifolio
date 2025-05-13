@@ -13,7 +13,7 @@ const anchorVariants = tv({
   base: 'flex items-center justify-center gap-1 cursor-pointer antialiased transition-all duration-200',
   variants: {
     variant: {
-      default: 'font-medium text-brand-black hover:text-gray-70',
+      default: 'font-medium text-brand-black hover:text-gray-60',
       socialMedia:
         'bg-gray-20 text-gray-70 hover:text-support-01 h-[40px] w-[40px] rounded-lg',
       button:
