@@ -175,39 +175,43 @@ export default {
                   containing Lorem Ipsum passages, and more recently with desktop
                   publishing software like Aldus PageMaker including versions of Lorem
                   Ipsum.`,
-    button: {
-      label: 'Show Details',
-      icon: 'ChevronDown',
-    },
     professional: {
       title: 'Professional',
       icon: 'Briefcase',
+      button: {
+        label: 'Show Details',
+        icon: 'ChevronDown',
+      },
       journey: [
         {
-          company_name: 'Wellhub',
-          description: 'São Paulo, SP, Brazil, 2021 - 2025',
-          position: 'Frontend Developer',
+          institution: 'Wellhub',
+          location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
+          qualification: 'Frontend Developer',
         },
         {
-          company_name: 'Wittel Comunicações LTDA',
-          description: 'São Paulo, SP, Brazil, 2018 - 2021',
-          position: 'Technical Support',
+          institution: 'Wittel Comunicações LTDA',
+          location_time: 'São Paulo, SP, Brazil, 2018 - 2021',
+          qualification: 'Technical Support',
         },
       ],
     },
     academic: {
       title: 'Academic',
       icon: 'Award',
+      button: {
+        label: 'Show Details',
+        icon: 'ChevronDown',
+      },
       journey: [
         {
-          college: 'Rocketseat',
-          description: 'São Paulo, SP, Brazil, 2021 - 2025',
-          degree: 'Fullstack - React, React Native and Node',
+          institution: 'Rocketseat',
+          location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
+          qualification: 'Fullstack - React, React Native and Node',
         },
         {
-          college: 'FMU - Centro Universitário',
-          description: 'São Paulo, SP, Brazil, 2016 - 2019',
-          degree: 'Degree - Systems analysis and development',
+          institution: 'FMU - Centro Universitário',
+          location_time: 'São Paulo, SP, Brazil, 2016 - 2019',
+          qualification: 'Degree - Systems analysis and development',
         },
       ],
     },

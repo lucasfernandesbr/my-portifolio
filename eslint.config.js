@@ -1,3 +1,4 @@
+import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginJSXAccessibility from 'eslint-plugin-jsx-a11y'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginReact from 'eslint-plugin-react'
@@ -96,4 +97,5 @@ export default [
     },
     ignores: ['node_modules'],
   },
+  eslintConfigPrettier,
 ]

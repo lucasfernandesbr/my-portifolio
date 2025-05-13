@@ -1,11 +1,11 @@
 import Container from '@Atoms/Container'
-import Icon from '@Atoms/Icon'
 import Text from '@Atoms/Text'
 
+import JourneyList from './JourneyList'
 import { JourneysProps } from './types'
 
 const Journeys: React.FC<JourneysProps> = ({ content }) => {
-  const { id, title, description, button, professional, academic } = content
+  const { id, title, description, professional, academic } = content
 
   return (
     <Container id={id}>
@@ -17,85 +17,19 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
         </div>
 
         <div id="journeys" className="flex flex-col gap-20">
-          <div className="flex w-full flex-col gap-8">
-            <div className="flex items-center gap-4">
-              <Icon type={professional.icon} />
+          <JourneyList
+            icon={professional.icon}
+            title={professional.title}
+            list={professional.journey}
+            button={professional.button}
+          />
 
-              <Text className="text-3xl font-semibold">
-                {professional.title}
-              </Text>
-            </div>
-
-            <ul className="flex w-full flex-col">
-              {professional.journey.map(
-                ({ company_name, description, position }) => (
-                  <li className="border-gray-20 flex justify-between border-b pt-10 pb-10 last:border-0">
-                    <div className="flex flex-col gap-3">
-                      <Text className="text-2xl font-semibold">
-                        {company_name}
-                      </Text>
-
-                      <div className="flex items-center gap-3">
-                        <Text className="text-gray-70 font-medium">
-                          {description}
-                        </Text>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <Text className="text-brand-black font-semibold">
-                        {position}
-                      </Text>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <Text className="text-brand-black font-semibold">
-                        {button.label}
-                      </Text>
-                      <Icon type={button.icon} />
-                    </div>
-                  </li>
-                ),
-              )}
-            </ul>
-          </div>
-
-          <div className="flex w-full flex-col gap-8">
-            <div className="flex items-center gap-4">
-              <Icon type={academic.icon} />
-
-              <Text className="text-3xl font-semibold">{academic.title}</Text>
-            </div>
-
-            <ul className="flex w-full flex-col">
-              {academic.journey.map(({ college, description, degree }) => (
-                <li className="border-gray-20 flex justify-between border-b pt-10 pb-10 last:border-0">
-                  <div className="flex flex-col gap-3">
-                    <Text className="text-2xl font-semibold">{college}</Text>
-
-                    <div className="flex items-center gap-3">
-                      <Text className="text-gray-70 font-medium">
-                        {description}
-                      </Text>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <Text className="text-brand-black font-semibold">
-                      {degree}
-                    </Text>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <Text className="text-brand-black font-semibold">
-                      {button.label}
-                    </Text>
-                    <Icon type={button.icon} />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <JourneyList
+            icon={academic.icon}
+            title={academic.title}
+            list={academic.journey}
+            button={academic.button}
+          />
         </div>
       </div>
     </Container>
