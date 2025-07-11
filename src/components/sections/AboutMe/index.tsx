@@ -12,7 +12,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ content }) => {
         <img
           src={img.src}
           alt={img.alt}
-          className="h-[600px] w-[524px] rounded-lg object-cover"
+          className="h-[600px] w-[524px] rounded-lg object-cover object-[25%_75%]"
         />
 
         <div className="flex w-[600px] flex-col justify-center gap-10">

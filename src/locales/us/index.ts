@@ -39,7 +39,7 @@ export default {
     id: 'hero',
     ready_online: {
       avatar: {
-        src: '/images/commons/about_me.webp',
+        src: '/images/commons/ready_online.webp',
         alt: 'Portrait of Lucas Fernandes Souza',
       },
       label: 'Ready to code',
