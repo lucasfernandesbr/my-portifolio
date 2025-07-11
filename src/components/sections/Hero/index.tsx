@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
 
   return (
     <Container id={id}>
-      <div className="flex w-full flex-col gap-12 pt-20 pb-20">
+      <div className="flex w-full flex-col items-center gap-12 pt-20 pb-20">
         <div className="flex items-center">
           <img
             src={ready_online.avatar.src}
@@ -25,11 +25,17 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           </Text>
         </div>
 
-        <h1 className="text-brand-black text-7xl font-extrabold">
+        <h1 className="text-brand-black text-center text-7xl font-extrabold">
           <Markdown content={title} />
         </h1>
 
         <div className="flex gap-4">
+          {buttons.socials.map(({ href, icon }) => (
+            <Anchor href={href} icon={icon} variant="socialMedia" />
+          ))}
+        </div>
+
+        <div className="flex">
           <Anchor
             label={buttons.scroll_down.label}
             icon={buttons.scroll_down.icon}
@@ -38,10 +44,6 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
               scrollToId(e, buttons.scroll_down.href)
             }
           />
-
-          {buttons.socials.map(({ href, icon }) => (
-            <Anchor href={href} icon={icon} variant="socialMedia" />
-          ))}
         </div>
       </div>
     </Container>
