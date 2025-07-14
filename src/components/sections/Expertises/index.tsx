@@ -8,14 +8,12 @@ const Expertises: React.FC<ExpertisesProps> = ({ content }) => {
 
   return (
     <Container id={id}>
-      <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
+      <div className="flex w-full flex-col gap-20 pt-[80px] pb-[80px]">
         <div className="flex flex-col gap-10">
           <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
 
-          <Text className="text-justify">{description}</Text>
+          <Text className="w-full max-w-[640px]">{description}</Text>
         </div>
-
-        <div className="border-gray-20 border-b" />
 
         <ul className="flex w-full justify-between">
           {techs.map(({ src, alt }) => (
