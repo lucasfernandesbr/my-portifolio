@@ -136,16 +136,8 @@ export default {
         alt: 'Node.js',
       },
       {
-        src: '/images/commons/techs/prisma.svg',
-        alt: 'Prisma',
-      },
-      {
         src: '/images/commons/techs/tailwind.svg',
         alt: 'Tailwind CSS',
-      },
-      {
-        src: '/images/commons/techs/styled-components.svg',
-        alt: 'Styled Components',
       },
       {
         src: '/images/commons/techs/storybook.svg',
