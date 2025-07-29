@@ -2,45 +2,30 @@ import Container from '@Atoms/Container'
 import Text from '@Atoms/Text'
 
 import ProjectCard from './ProjectCard'
+import { ProjectsProps } from './types'
 
-const Projects: React.FC = () => {
+const Projects: React.FC<ProjectsProps> = ({ content }) => {
+  const { title, description, items } = content
+
   return (
     <Container>
       <div className="flex w-full flex-col gap-20 pt-[80px] pb-[80px]">
         <div className="border-gray-30 flex flex-col items-center gap-12 border-b-1 pb-12">
-          <h1 className="text-brand-black text-5xl font-semibold">
-            A Few Projects That I’ve Worked
-          </h1>
+          <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
 
           <Text className="w-full max-w-[640px] text-center">
-            i’m a Front-End Developer with over 3 years of experience,
-            specializing in React and Next.js. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s.
+            {description}
           </Text>
         </div>
 
-        <ProjectCard
-          title="Project 1"
-          description="i’m a Front-End Developer with over 3 years of experience,
-              specializing in React and Next.js. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s."
-        />
-
-        <ProjectCard
-          title="Project 2"
-          description="i’m a Front-End Developer with over 3 years of experience,
-              specializing in React and Next.js. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s."
-          variant="withBackground"
-          inverted
-        />
-
-        <ProjectCard
-          title="Project 3"
-          description="i’m a Front-End Developer with over 3 years of experience,
-              specializing in React and Next.js. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s."
-        />
+        {items.map(({ title, description, variant, inverted }) => (
+          <ProjectCard
+            title={title}
+            description={description}
+            {...(variant && { variant })}
+            {...(inverted && { inverted })}
+          />
+        ))}
       </div>
     </Container>
   )

@@ -3,14 +3,9 @@ import { tv } from 'tailwind-variants'
 
 import Text from '@/components/shared/Atoms/Text'
 
-type ProjectCardProps = {
-  title: string
-  description: string
-  variant?: 'withBackground'
-  inverted?: boolean
-}
+import { ProjectCardProps } from './types'
 
-const projectCardVariants = tv({
+const projectCardContainerVariants = tv({
   base: 'flex justify-between rounded-2xl',
   variants: {
     variant: {
@@ -42,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   inverted,
 }) => {
   return (
-    <div className={projectCardVariants({ variant, inverted })}>
+    <div className={projectCardContainerVariants({ variant, inverted })}>
       <div className="flex max-w-[496px] flex-col gap-8">
         <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
 

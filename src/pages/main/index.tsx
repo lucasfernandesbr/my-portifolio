@@ -15,8 +15,16 @@ import Header from '@Organisms/Header'
 import useContent from './content'
 
 const Main: React.FC = () => {
-  const { header, hero, introduction, about_me, expertises, journeys, footer } =
-    useContent()
+  const {
+    header,
+    hero,
+    introduction,
+    about_me,
+    expertises,
+    journeys,
+    projects,
+    footer,
+  } = useContent()
 
   return (
     <div className="flex size-full flex-col justify-center align-middle">
@@ -26,7 +34,7 @@ const Main: React.FC = () => {
       <AboutMe content={about_me} />
       <Expertises content={expertises} />
       <Journeys content={journeys} />
-      <Projects />
+      <Projects content={projects} />
       <Curiosities />
       <Footer content={footer} />
     </div>
