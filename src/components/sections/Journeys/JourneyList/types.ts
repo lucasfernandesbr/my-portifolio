@@ -9,6 +9,7 @@ export type JourneyList = {
   institution: string
   location_time: string
   qualification: string
+  specialization: string
 }
 
 export type JourneyListProps = {

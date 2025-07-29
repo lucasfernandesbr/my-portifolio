@@ -10,13 +10,15 @@ const Journeys: React.FC<JourneysProps> = ({ content }) => {
   return (
     <Container id={id}>
       <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col items-center gap-10">
           <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
 
-          <Text className="text-justify">{description}</Text>
+          <Text className="w-full max-w-[640px] text-center">
+            {description}
+          </Text>
         </div>
 
-        <div id="journeys" className="flex flex-col gap-20">
+        <div id="journeys" className="border-gray-30 flex border-t-1">
           <JourneyList
             icon={professional.icon}
             title={professional.title}

@@ -8,15 +8,19 @@ export default {
       },
       {
         id: 'expertises',
-        label: 'Minhas Habilidades & Experiências',
+        label: 'Habilidades',
       },
       {
         id: 'journeys',
-        label: 'Jornadas Profissionais & Acadêmicas',
+        label: 'Jornadas',
       },
       {
-        id: 'faq',
-        label: 'Perguntas',
+        id: 'projects',
+        label: 'Projetos',
+      },
+      {
+        id: 'curiosities',
+        label: 'Curiosidades',
       },
     ],
     mode_switch: {
@@ -167,11 +171,6 @@ export default {
                   de editoração como Aldus PageMaker incluindo versões do Lorem Ipsum.`,
     professional: {
       title: 'Professional',
-      icon: 'Briefcase',
-      button: {
-        label: 'Show Details',
-        icon: 'ChevronDown',
-      },
       journey: [
         {
           institution: 'Wellhub',
@@ -187,55 +186,21 @@ export default {
     },
     academic: {
       title: 'Academic',
-      icon: 'Award',
-      button: {
-        label: 'Show Details',
-        icon: 'ChevronDown',
-      },
       journey: [
         {
           institution: 'Rocketseat',
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
-          qualification: 'Fullstack - React, React Native and Node',
+          qualification: 'Fullstack',
+          specialization: 'React, React Native and Node',
         },
         {
           institution: 'FMU - Centro Universitário',
           location_time: 'São Paulo, SP, Brazil, 2016 - 2019',
-          qualification: 'Degree - Systems analysis and development',
+          qualification: 'Degree',
+          specialization: 'Systems Analysis and Development',
         },
       ],
     },
-  },
-  faq: {
-    id: 'faq',
-    title: 'Algumas Perguntas Sobre Mim',
-    questions: [
-      {
-        question:
-          'Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão.',
-        answer: 'Sim. Segue o padrão de design WAI-ARIA.',
-      },
-      {
-        question:
-          'Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão.',
-        answer: 'Sim. Segue o padrão de design WAI-ARIA.',
-      },
-      {
-        question:
-          'Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão.',
-        answer: 'Sim. Segue o padrão de design WAI-ARIA.',
-      },
-      {
-        question:
-          'Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão.',
-        answer: 'Sim. Segue o padrão de design WAI-ARIA.',
-      },
-      {
-        question:
-          'Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão.',
-        answer: 'Sim. Segue o padrão de design WAI-ARIA.',
-      },
-    ],
   },
   footer: {
     id: 'footer',
@@ -250,15 +215,19 @@ export default {
       },
       {
         id: 'expertises',
-        label: 'Minhas Habilidades & Experiências',
+        label: 'Habilidades',
       },
       {
         id: 'journeys',
-        label: 'Jornadas Profissionais & Acadêmicas',
+        label: 'Jornadas',
       },
       {
-        id: 'faq',
-        label: 'Perguntas',
+        id: 'projects',
+        label: 'Projetos',
+      },
+      {
+        id: 'curiosities',
+        label: 'Curiosidades',
       },
     ],
     socials: [

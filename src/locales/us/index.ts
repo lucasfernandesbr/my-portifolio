@@ -8,15 +8,19 @@ export default {
       },
       {
         id: 'expertises',
-        label: 'My Skills & Experiences',
+        label: 'Skills',
       },
       {
         id: 'journeys',
-        label: 'Professional & Academic journeys',
+        label: 'Journeys',
       },
       {
-        id: 'faq',
-        label: 'FAQ',
+        id: 'projects',
+        label: 'Projects',
+      },
+      {
+        id: 'curiosities',
+        label: 'Curiosities',
       },
     ],
     mode_switch: {
@@ -167,75 +171,38 @@ export default {
                   Ipsum.`,
     professional: {
       title: 'Professional',
-      icon: 'Briefcase',
-      button: {
-        label: 'Show Details',
-        icon: 'ChevronDown',
-      },
       journey: [
         {
           institution: 'Wellhub',
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
           qualification: 'Frontend Developer',
+          specialization: 'B2B Acquisition Team',
         },
         {
           institution: 'Wittel Comunicações LTDA',
           location_time: 'São Paulo, SP, Brazil, 2018 - 2021',
           qualification: 'Technical Support',
+          specialization: 'IPC Tech Team',
         },
       ],
     },
     academic: {
       title: 'Academic',
-      icon: 'Award',
-      button: {
-        label: 'Show Details',
-        icon: 'ChevronDown',
-      },
       journey: [
         {
           institution: 'Rocketseat',
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
-          qualification: 'Fullstack - React, React Native and Node',
+          qualification: 'GoStack',
+          specialization: 'React, React Native and Node',
         },
         {
           institution: 'FMU - Centro Universitário',
           location_time: 'São Paulo, SP, Brazil, 2016 - 2019',
-          qualification: 'Degree - Systems analysis and development',
+          qualification: 'Degree',
+          specialization: 'Systems Analysis and Development',
         },
       ],
     },
-  },
-  faq: {
-    id: 'faq',
-    title: 'A Few Questions About Me',
-    questions: [
-      {
-        question:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        answer: 'Yes. It adheres to the WAI-ARIA design pattern.',
-      },
-      {
-        question:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        answer: 'Yes. It adheres to the WAI-ARIA design pattern.',
-      },
-      {
-        question:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        answer: 'Yes. It adheres to the WAI-ARIA design pattern.',
-      },
-      {
-        question:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        answer: 'Yes. It adheres to the WAI-ARIA design pattern.',
-      },
-      {
-        question:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        answer: 'Yes. It adheres to the WAI-ARIA design pattern.',
-      },
-    ],
   },
   footer: {
     id: 'footer',
@@ -250,15 +217,19 @@ export default {
       },
       {
         id: 'expertises',
-        label: 'My Skills & Experiences',
+        label: 'Skills',
       },
       {
         id: 'journeys',
-        label: 'Professional & Academic journeys',
+        label: 'Journeys',
       },
       {
-        id: 'faq',
-        label: 'FAQ',
+        id: 'projects',
+        label: 'Projects',
+      },
+      {
+        id: 'curiosities',
+        label: 'Curiosities',
       },
     ],
     socials: [
