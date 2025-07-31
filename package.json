@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://lucasfernandesbr.github.io/my-portifolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
@@ -18,6 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.5",
+    "gh-pages": "^6.3.0",
     "i18next": "^25.0.2",
     "lucide-react": "^0.477.0",
     "react": "^19.0.0",
