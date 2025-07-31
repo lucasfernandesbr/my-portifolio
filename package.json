@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "yarn predeploy && gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
