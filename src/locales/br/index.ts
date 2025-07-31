@@ -28,12 +28,12 @@ export default {
     },
     countries: {
       us: {
-        src: '/images/country/us/flag.webp',
+        src: '/my-portifolio/images/country/us/flag.webp',
         alt: 'Bandeira dos Estados Unidos',
         label: 'Inglês',
       },
       br: {
-        src: '/images/country/br/flag.webp',
+        src: '/my-portifolio/images/country/br/flag.webp',
         alt: 'Bandeira do Brasil',
         label: 'Português',
       },
@@ -43,7 +43,7 @@ export default {
     id: 'hero',
     ready_online: {
       avatar: {
-        src: '/images/commons/ready_online.webp',
+        src: '/my-portifolio/images/commons/ready_online.webp',
         alt: 'Portrait of Lucas Fernandes Souza',
       },
       label: 'Pronto para codar',
@@ -92,7 +92,7 @@ export default {
   about_me: {
     id: 'about_me',
     img: {
-      src: '/images/commons/about_me.webp',
+      src: '/my-portifolio/images/commons/about_me.webp',
       alt: 'Retrato de Lucas Fernandes Souza',
     },
     title: 'Um Pouco Sobre Mim',
@@ -120,43 +120,43 @@ export default {
                   de editoração como Aldus PageMaker incluindo versões do Lorem Ipsum.`,
     techs: [
       {
-        src: '/images/commons/techs/javascript.svg',
+        src: '/my-portifolio/images/commons/techs/javascript.svg',
         alt: 'JavaScript',
       },
       {
-        src: '/images/commons/techs/typescript.svg',
+        src: '/my-portifolio/images/commons/techs/typescript.svg',
         alt: 'TypeScript',
       },
       {
-        src: '/images/commons/techs/react.svg',
+        src: '/my-portifolio/images/commons/techs/react.svg',
         alt: 'React',
       },
       {
-        src: '/images/commons/techs/nextjs.svg',
+        src: '/my-portifolio/images/commons/techs/nextjs.svg',
         alt: 'Next.js',
       },
       {
-        src: '/images/commons/techs/nodejs.svg',
+        src: '/my-portifolio/images/commons/techs/nodejs.svg',
         alt: 'Node.js',
       },
       {
-        src: '/images/commons/techs/tailwind.svg',
+        src: '/my-portifolio/images/commons/techs/tailwind.svg',
         alt: 'Tailwind CSS',
       },
       {
-        src: '/images/commons/techs/storybook.svg',
+        src: '/my-portifolio/images/commons/techs/storybook.svg',
         alt: 'Storybook',
       },
       {
-        src: '/images/commons/techs/jest.svg',
+        src: '/my-portifolio/images/commons/techs/jest.svg',
         alt: 'Jest',
       },
       {
-        src: '/images/commons/techs/cypress.svg',
+        src: '/my-portifolio/images/commons/techs/cypress.svg',
         alt: 'Cypress',
       },
       {
-        src: '/images/commons/techs/playwright.svg',
+        src: '/my-portifolio/images/commons/techs/playwright.svg',
         alt: 'Playwright',
       },
     ],
