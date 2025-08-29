@@ -10,9 +10,9 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
 
   return (
     <Container>
-      <div className="flex w-full flex-col gap-12 pt-[80px] pb-[80px]">
-        <div className="flex w-full items-center justify-between">
-          <ul className="flex gap-14">
+      <div className="xs:pt-8 xs:pb-8 flex w-full flex-col gap-12 lg:pt-20 lg:pb-20">
+        <div className="xs:flex-col-reverse xs:gap-10 flex w-full items-center justify-between lg:flex-row">
+          <ul className="xs:flex-col flex gap-14 lg:flex-row">
             {nav.map(({ id, label }) => (
               <li>
                 <Anchor
@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
 
         <div className="bg-gray-20 h-[1px] w-full" />
 
-        <p>{copyright}</p>
+        <p className="xs:text-center lg:text-left">{copyright}</p>
       </div>
     </Container>
   )

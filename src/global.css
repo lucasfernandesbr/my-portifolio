@@ -149,6 +149,10 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme {
+  --breakpoint-xs: 20rem;
+}
+
 @keyframes animation-down {
 	from {
 		height: 0;
@@ -203,10 +207,9 @@
   * {
     @apply border-border outline-ring/50;
     font-family: var(--font-primary);
-    /* font-size: var(--font-size); */
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-brand-white text-foreground;
   }
 }

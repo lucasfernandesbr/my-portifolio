@@ -227,8 +227,7 @@ export default {
           src: '',
           alt: '',
         },
-        variant: 'withBackground',
-        inverted: true,
+        vvariant: 'inverted',
       },
       {
         title: 'Project 3',

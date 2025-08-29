@@ -1,4 +1,3 @@
-import React from 'react'
 import { tv } from 'tailwind-variants'
 
 import Text from '@/components/shared/Atoms/Text'
@@ -6,47 +5,30 @@ import Text from '@/components/shared/Atoms/Text'
 import { ProjectCardProps } from './types'
 
 const projectCardContainerVariants = tv({
-  base: 'flex justify-between rounded-2xl',
+  base: 'flex justify-between rounded-2xl xs:flex-col xs:gap-7 lg:w-full lg:flex-row',
   variants: {
     variant: {
-      withBackground: 'bg-gray-20 p-20',
-    },
-    inverted: {
-      true: 'flex-row-reverse',
+      inverted: 'lg:flex-row-reverse',
     },
   },
 })
 
-const projectCardImageVariants = tv({
-  base: 'bg-brand-black h-[368px] rounded-lg',
-  variants: {
-    variant: {
-      default: 'w-[572px]',
-      withBackground: 'w-[496px]',
-    },
-  },
-  defaultVariants: {
-    variant: 'default',
-  },
-})
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+export default function ProjectCard({
   title,
   description,
   variant,
-  inverted,
-}) => {
+}: ProjectCardProps) {
   return (
-    <div className={projectCardContainerVariants({ variant, inverted })}>
-      <div className="flex max-w-[496px] flex-col gap-8">
-        <h1 className="text-brand-black text-5xl font-semibold">{title}</h1>
+    <div className={projectCardContainerVariants({ variant })}>
+      <div className="xs:gap-5 xs:xs:max-w-[320px] flex flex-col lg:max-w-none lg:flex-1 lg:gap-8">
+        <h1 className="xs:text-2xl xs:gap-3 text-brand-black font-semibold lg:text-5xl">
+          {title}
+        </h1>
 
         <Text>{description}</Text>
       </div>
 
-      <div className={projectCardImageVariants({ variant })} />
+      <div className="xs:w-full xs:max-w-[320px] xs:h-[216px] bg-brand-black shrink-0 rounded-lg lg:h-[368px] lg:max-w-none lg:flex-1" />
     </div>
   )
 }
-
-export default ProjectCard

@@ -229,8 +229,7 @@ export default {
           src: '',
           alt: '',
         },
-        variant: 'withBackground',
-        inverted: true,
+        variant: 'inverted',
       },
       {
         title: 'Project 3',

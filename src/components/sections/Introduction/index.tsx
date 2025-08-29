@@ -4,19 +4,23 @@ import Text from '@Atoms/Text'
 
 import { IntroductionProps } from './types'
 
-const Introduction: React.FC<IntroductionProps> = ({ content }) => {
+export default function Introduction({ content }: IntroductionProps) {
   const { id, cards } = content
 
   return (
     <Container id={id}>
-      <div className="pt-20 pb-20">
-        <ul className="flex w-full flex-row items-center justify-between">
+      <div className="xs:pt-8 xs:pb-8 lg:pt-20 lg:pb-20">
+        <ul className="xs:flex-col xs:gap-12 flex w-full items-center justify-between lg:flex-row">
           {cards.map(({ title, icon, content }) => (
             <li className="flex max-w-[180px] flex-col items-center gap-2 text-center">
-              {title && <Text className="text-4xl font-bold">{title}</Text>}
+              {title && (
+                <Text className="xs:text-3xl font-bold lg:text-4xl">
+                  {title}
+                </Text>
+              )}
               {icon && <Icon type={icon} size={40} />}
 
-              <Text className="text-lg">{content}</Text>
+              <Text className="xs:text-base lg:text-lg">{content}</Text>
             </li>
           ))}
         </ul>
@@ -24,5 +28,3 @@ const Introduction: React.FC<IntroductionProps> = ({ content }) => {
     </Container>
   )
 }
-
-export default Introduction

@@ -7,47 +7,47 @@ import Text from '@Atoms/Text'
 
 import { HeroProps } from './types'
 
-const Hero: React.FC<HeroProps> = ({ content }) => {
+export default function Hero({ content }: HeroProps) {
   const { id, title, ready_online, buttons } = content
 
   return (
     <Container id={id}>
-      <div className="flex w-full flex-col items-center gap-12 pt-20 pb-20">
-        <div className="flex items-center">
-          <img
-            src={ready_online.avatar.src}
-            alt={ready_online.avatar.alt}
-            className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full object-cover"
-          />
-          <div className="bg-support-02 mr-2 h-[8px] w-[8px] rounded-full" />
-          <Text className="text-xs font-semibold uppercase">
-            {ready_online.label}
-          </Text>
-        </div>
+      <div className="flex flex-1 justify-center">
+        <div className="xs:pt-8 xs:pb-8 xs:mt-18 xs:max-w-[468px] flex w-full flex-col items-center gap-12 lg:mt-0 lg:max-w-full lg:pt-20 lg:pb-20">
+          <div className="flex items-center">
+            <img
+              src={ready_online.avatar.src}
+              alt={ready_online.avatar.alt}
+              className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full object-cover"
+            />
+            <div className="bg-support-02 mr-2 h-[8px] w-[8px] rounded-full" />
+            <Text className="text-xs font-semibold uppercase">
+              {ready_online.label}
+            </Text>
+          </div>
 
-        <h1 className="text-brand-black text-center text-7xl font-extrabold">
-          <Markdown content={title} />
-        </h1>
+          <h1 className="text-brand-black xs:text-4xl text-center font-extrabold md:text-5xl lg:text-7xl">
+            <Markdown content={title} />
+          </h1>
 
-        <div className="flex gap-4">
-          {buttons.socials.map(({ href, icon }) => (
-            <Anchor href={href} icon={icon} variant="socialMedia" />
-          ))}
-        </div>
+          <div className="flex gap-4">
+            {buttons.socials.map(({ href, icon }) => (
+              <Anchor href={href} icon={icon} variant="socialMedia" />
+            ))}
+          </div>
 
-        <div className="flex">
-          <Anchor
-            label={buttons.scroll_down.label}
-            icon={buttons.scroll_down.icon}
-            variant="button"
-            onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
-              scrollToId(e, buttons.scroll_down.href)
-            }
-          />
+          <div className="flex">
+            <Anchor
+              label={buttons.scroll_down.label}
+              icon={buttons.scroll_down.icon}
+              variant="button"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
+                scrollToId(e, buttons.scroll_down.href)
+              }
+            />
+          </div>
         </div>
       </div>
     </Container>
   )
 }
-
-export default Hero
