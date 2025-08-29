@@ -7,7 +7,7 @@ import { ContextType, ProviderProps } from './types'
 
 const CountryContext = createContext<ContextType>({} as ContextType)
 
-export const Provider = ({ children }: ProviderProps) => {
+export function Provider({ children }: ProviderProps) {
   const [country, setCountry] = useState<Country>('us')
 
   const { i18n } = useTranslation()
@@ -24,7 +24,7 @@ export const Provider = ({ children }: ProviderProps) => {
   )
 }
 
-export const useCountrySwitch = () => {
+export function useCountrySwitch() {
   const context = useContext(CountryContext)
 
   if (!context) {

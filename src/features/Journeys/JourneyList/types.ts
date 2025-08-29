@@ -1,0 +1,20 @@
+import { IconName } from '@components/Icon'
+
+export type JourneyButton = {
+  label: string
+  icon: IconName
+}
+
+export type JourneyList = {
+  institution: string
+  location_time: string
+  qualification: string
+  specialization: string
+}
+
+export type JourneyListProps = {
+  icon: IconName
+  title: string
+  list: JourneyList[]
+  button: JourneyButton
+}

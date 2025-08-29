@@ -12,20 +12,13 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@lib': path.resolve(__dirname, './src/lib'),
+      '@utils': path.resolve(__dirname, './src/utils'),
       '@locales': path.resolve(__dirname, './src/locales'),
       '@types': path.resolve(__dirname, './src/types'),
       '@contexts': path.resolve(__dirname, './src/contexts'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@sections': path.resolve(__dirname, './src/components/sections'),
-      '@Atoms': path.resolve(__dirname, './src/components/shared/Atoms'),
-      '@Molecules': path.resolve(
-        __dirname,
-        './src/components/shared/Molecules',
-      ),
-      '@Organisms': path.resolve(
-        __dirname,
-        './src/components/shared/Organisms',
-      ),
+      '@features': path.resolve(__dirname, './src/features'),
+      '@components': path.resolve(__dirname, './src/components'),
     },
   },
 })

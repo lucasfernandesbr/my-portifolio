@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import type { TFunction } from 'i18next'
 
-import { AboutMeContent } from '@sections/AboutMe/types'
-import { ExpertisesContent } from '@sections/Expertises/types'
-import { HeroContent } from '@sections/Hero/types'
-import { IntroductionContent } from '@sections/Introduction/types'
-import { JourneysContent } from '@sections/Journeys/types'
-import { ProjectsContent } from '@sections/Projects/types'
+import { AboutMeContent } from '@features/AboutMe/types'
+import { ExpertisesContent } from '@features/Expertises/types'
+import { HeroContent } from '@features/Hero/types'
+import { IntroductionContent } from '@features/Introduction/types'
+import { JourneysContent } from '@features/Journeys/types'
+import { ProjectsContent } from '@features/Projects/types'
 
-import { FooterContent } from '@Molecules/Footer/types'
-import { HeaderContent } from '@Organisms/Header/types'
+import { FooterContent } from '@components/Footer/types'
+import { HeaderContent } from '@components/Header/types'
 
 type Content = {
   header: HeaderContent

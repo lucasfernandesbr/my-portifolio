@@ -1,16 +1,15 @@
 import React from 'react'
 
-import Curiosities from '@/components/sections/Curiosities'
-import Projects from '@/components/sections/Projects'
+import AboutMe from '@features/AboutMe'
+import Curiosities from '@features/Curiosities'
+import Expertises from '@features/Expertises'
+import Hero from '@features/Hero'
+import Introduction from '@features/Introduction'
+import Journeys from '@features/Journeys'
+import Projects from '@features/Projects'
 
-import AboutMe from '@sections/AboutMe'
-import Expertises from '@sections/Expertises'
-import Hero from '@sections/Hero'
-import Introduction from '@sections/Introduction'
-import Journeys from '@sections/Journeys'
-
-import Footer from '@Molecules/Footer'
-import Header from '@Organisms/Header'
+import Footer from '@components/Footer'
+import Header from '@components/Header'
 
 import useContent from './content'
 

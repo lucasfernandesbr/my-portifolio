@@ -21,14 +21,13 @@
     "paths": {
       "@/*": ["./src/*"],
       "@lib/*": ["./src/lib/*"],
+      "@utils/*": ["./src/utils/*"],
       "@locales/*": ["./src/locales/*"],
       "@/types/*": ["./src/types/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@sections/*": ["./src/components/sections/*"],
-      "@Atoms/*": ["./src/components/shared/Atoms/*"],
-      "@Molecules/*": ["./src/components/shared/Molecules/*"],
-      "@Organisms/*": ["./src/components/shared/Organisms/*"]
+      "@features/*": ["./src/features/*"],
+      "@components/*": ["./src/components/*"],
     }
   },
   "include": ["src"]
