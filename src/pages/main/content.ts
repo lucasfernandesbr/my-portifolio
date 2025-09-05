@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import type { TFunction } from 'i18next'
 
 import { AboutMeContent } from '@features/AboutMe/types'
+import { CuriositiesContent } from '@features/Curiosities/types'
 import { ExpertisesContent } from '@features/Expertises/types'
 import { HeroContent } from '@features/Hero/types'
 import { IntroductionContent } from '@features/Introduction/types'
@@ -19,6 +20,7 @@ type Content = {
   expertises: ExpertisesContent
   journeys: JourneysContent
   projects: ProjectsContent
+  curiosities: CuriositiesContent
   footer: FooterContent
 }
 
@@ -37,6 +39,7 @@ const useContent = (): Content => {
     expertises: getTranslation(t, 'expertises') as ExpertisesContent,
     journeys: getTranslation(t, 'journeys') as JourneysContent,
     projects: getTranslation(t, 'projects') as ProjectsContent,
+    curiosities: getTranslation(t, 'curiosities') as CuriositiesContent,
     footer: getTranslation(t, 'footer') as FooterContent,
   }
 

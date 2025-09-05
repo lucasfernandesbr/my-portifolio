@@ -22,6 +22,7 @@ const Main: React.FC = () => {
     expertises,
     journeys,
     projects,
+    curiosities,
     footer,
   } = useContent()
 
@@ -34,7 +35,7 @@ const Main: React.FC = () => {
       <Expertises content={expertises} />
       <Journeys content={journeys} />
       <Projects content={projects} />
-      <Curiosities />
+      <Curiosities content={curiosities} />
       <Footer content={footer} />
     </div>
   )

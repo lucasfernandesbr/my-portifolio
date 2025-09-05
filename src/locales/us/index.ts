@@ -243,6 +243,44 @@ export default {
       },
     ],
   },
+  curiosities: {
+    title: 'Curiosities About Myself',
+    description: `i’m a Front-End Developer with over 3 years of experience,
+                  specializing in React and Next.js. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s.`,
+    items: [
+      {
+        title: 'Dance Student',
+        description: `i’m a Front-End Developer with over 3 years of experience,
+                      specializing in React and Next.js. Lorem Ipsum has been the
+                      industry's standard dummy text ever since the 1500s.`,
+        image: {
+          key: 'dance_student',
+          alt: 'Dance Student',
+        },
+      },
+      {
+        title: 'Gamer',
+        description: `i’m a Front-End Developer with over 3 years of experience,
+                      specializing in React and Next.js. Lorem Ipsum has been the
+                      industry's standard dummy text ever since the 1500s.`,
+        image: {
+          key: 'gamer',
+          alt: 'Gaming Setup',
+        },
+      },
+      {
+        title: 'Travel Lover',
+        description: `i’m a Front-End Developer with over 3 years of experience,
+                      specializing in React and Next.js. Lorem Ipsum has been the
+                      industry's standard dummy text ever since the 1500s.`,
+        image: {
+          key: 'travel',
+          alt: 'Travel Lover',
+        },
+      },
+    ],
+  },
   footer: {
     id: 'footer',
     nav: [
