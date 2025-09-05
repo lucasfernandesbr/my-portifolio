@@ -81,6 +81,7 @@ export default [
             ['^@hooks'],
             ['^@features'],
             ['^@components'],
+            ['^@assets'],
             ['^\\.'],
           ],
         },

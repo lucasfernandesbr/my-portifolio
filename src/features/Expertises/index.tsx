@@ -1,10 +1,14 @@
 import Container from '@components/Container'
 import Text from '@components/Text'
 
+import useAssets from '@assets'
+
 import { ExpertisesProps } from './types'
 
 export default function Expertises({ content }: ExpertisesProps) {
   const { id, title, description, techs } = content
+
+  const { techs: techsAssets } = useAssets()
 
   return (
     <Container id={id}>
@@ -19,9 +23,12 @@ export default function Expertises({ content }: ExpertisesProps) {
           </div>
 
           <ul className="xs:flex-wrap xs:gap-10 xs:justify-center flex w-full lg:justify-between">
-            {techs.map(({ src, alt }) => (
-              <li className="flex h-10 items-center rounded-sm">
-                <img className="h-full" src={src} alt={alt} />
+            {techs.map(({ key, alt }) => (
+              <li
+                key={alt}
+                className="xs:h-8 flex items-center rounded-sm lg:h-10"
+              >
+                <img className="h-full" src={techsAssets[key]} alt={alt} />
               </li>
             ))}
           </ul>

@@ -1,5 +1,5 @@
 type Tech = {
-  src: string
+  key: string
   alt: string
 }
 

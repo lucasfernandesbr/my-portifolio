@@ -1,7 +1,7 @@
 export type AboutMeContent = {
   id: string
   img: {
-    src: string
+    key: string
     alt: string
   }
   title: string

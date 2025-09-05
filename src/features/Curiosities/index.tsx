@@ -1,7 +1,19 @@
+import { useEffect } from 'react'
+
 import Container from '@components/Container'
 import Text from '@components/Text'
 
+import useAssets from '@assets'
+
 export default function Curiosities() {
+  const { images, loadImages } = useAssets()
+
+  const hasImages = Object.keys(images).length
+
+  useEffect(() => {
+    if (!hasImages) loadImages()
+  }, [images, loadImages])
+
   return (
     <Container>
       <div className="flex flex-1 justify-center">
@@ -21,7 +33,7 @@ export default function Curiosities() {
           <div className="xs:flex-col flex justify-between gap-10 lg:flex-row">
             <div className="flex max-w-[320px] flex-col gap-8">
               <img
-                src="/my-portifolio/images/commons/dance_student.jpg"
+                src={images['dance_student']}
                 alt="travel"
                 className="bg-brand-black h-[216px] rounded-lg object-cover"
               />
@@ -57,7 +69,7 @@ export default function Curiosities() {
 
             <div className="flex max-w-[320px] flex-col gap-8">
               <img
-                src="/my-portifolio/images/commons/travel.jpg"
+                src={images['travel']}
                 alt="travel"
                 className="bg-brand-black h-[216px] rounded-lg object-cover"
               />

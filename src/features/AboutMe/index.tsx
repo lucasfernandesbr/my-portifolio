@@ -1,17 +1,28 @@
+import { useEffect } from 'react'
+
 import Container from '@components/Container'
 import Markdown from '@components/Markdown'
+
+import useAssets from '@assets'
 
 import { AboutMeProps } from './types'
 
 export default function AboutMe({ content }: AboutMeProps) {
   const { id, img, title, content: about_me } = content
+  const { images, loadImages } = useAssets()
+
+  const hasImages = Object.keys(images).length
+
+  useEffect(() => {
+    if (!hasImages) loadImages()
+  }, [images, loadImages])
 
   return (
     <Container id={id}>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:flex-col xs:gap-12 xs:max-w-[468px] flex w-full items-center justify-between pt-20 pb-20 lg:max-w-full lg:flex-row">
           <img
-            src={img.src}
+            src={images[img.key]}
             alt={img.alt}
             className="xs:w-full xs:h-[400px] max-w-[524px] rounded-lg object-cover object-[25%_75%] lg:h-[600px]"
           />

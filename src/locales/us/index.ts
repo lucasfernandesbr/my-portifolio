@@ -28,12 +28,12 @@ export default {
     },
     countries: {
       us: {
-        src: '/my-portifolio/images/country/us/flag.webp',
+        key: 'us',
         alt: 'United States flag',
         label: 'English',
       },
       br: {
-        src: '/my-portifolio/images/country/br/flag.webp',
+        key: 'br',
         alt: 'Brazil flag',
         label: 'Portuguese',
       },
@@ -43,7 +43,7 @@ export default {
     id: 'hero',
     ready_online: {
       avatar: {
-        src: '/my-portifolio/images/commons/ready_online.webp',
+        key: 'ready_online',
         alt: 'Portrait of Lucas Fernandes Souza',
       },
       label: 'Ready to code',
@@ -92,7 +92,7 @@ export default {
   about_me: {
     id: 'about_me',
     img: {
-      src: '/my-portifolio/images/commons/about_me.webp',
+      key: 'about_me',
       alt: 'Portrait of Lucas Fernandes Souza',
     },
     title: 'A Bit About Me',
@@ -119,43 +119,43 @@ export default {
                   containing Lorem Ipsum passages.`,
     techs: [
       {
-        src: '/my-portifolio/images/commons/techs/javascript.svg',
+        key: 'javascript',
         alt: 'JavaScript',
       },
       {
-        src: '/my-portifolio/images/commons/techs/typescript.svg',
+        key: 'typescript',
         alt: 'TypeScript',
       },
       {
-        src: '/my-portifolio/images/commons/techs/react.svg',
+        key: 'react',
         alt: 'React',
       },
       {
-        src: '/my-portifolio/images/commons/techs/nextjs.svg',
+        key: 'nextjs',
         alt: 'Next.js',
       },
       {
-        src: '/my-portifolio/images/commons/techs/nodejs.svg',
+        key: 'nodejs',
         alt: 'Node.js',
       },
       {
-        src: '/my-portifolio/images/commons/techs/tailwind.svg',
+        key: 'tailwind',
         alt: 'Tailwind CSS',
       },
       {
-        src: '/my-portifolio/images/commons/techs/storybook.svg',
+        key: 'storybook',
         alt: 'Storybook',
       },
       {
-        src: '/my-portifolio/images/commons/techs/jest.svg',
+        key: 'jest',
         alt: 'Jest',
       },
       {
-        src: '/my-portifolio/images/commons/techs/cypress.svg',
+        key: 'cypress',
         alt: 'Cypress',
       },
       {
-        src: '/my-portifolio/images/commons/techs/playwright.svg',
+        key: 'playwright',
         alt: 'Playwright',
       },
     ],

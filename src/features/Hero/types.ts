@@ -11,11 +11,13 @@ type HeroAnchor = {
   icon: IconName
 }
 
+type Avatar = {
+  key: string
+  alt: string
+}
+
 type ReadyOnline = {
-  avatar: {
-    src: string
-    alt: string
-  }
+  avatar: Avatar
   label: string
 }
 

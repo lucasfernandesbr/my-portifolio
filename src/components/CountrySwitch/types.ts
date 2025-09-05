@@ -3,7 +3,7 @@ import { Country } from '@/types/global'
 import { IconName } from '@components/Icon'
 
 type CountryFlag = {
-  src: string
+  key: string
   alt: string
   label: string
 }

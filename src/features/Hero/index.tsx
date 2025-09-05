@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { scrollToId } from '@utils/scrollToId'
 
 import Anchor from '@components/Anchor'
@@ -5,10 +7,20 @@ import Container from '@components/Container'
 import Markdown from '@components/Markdown'
 import Text from '@components/Text'
 
+import useAssets from '@assets'
+
 import { HeroProps } from './types'
 
 export default function Hero({ content }: HeroProps) {
   const { id, title, ready_online, buttons } = content
+
+  const { images, loadImages } = useAssets()
+
+  const hasImages = Object.keys(images).length
+
+  useEffect(() => {
+    if (!hasImages) loadImages()
+  }, [images, loadImages])
 
   return (
     <Container id={id}>
@@ -16,7 +28,7 @@ export default function Hero({ content }: HeroProps) {
         <div className="xs:pt-8 xs:pb-8 xs:mt-18 xs:max-w-[468px] flex w-full flex-col items-center gap-12 lg:mt-0 lg:max-w-full lg:pt-20 lg:pb-20">
           <div className="flex items-center">
             <img
-              src={ready_online.avatar.src}
+              src={images[ready_online.avatar.key]}
               alt={ready_online.avatar.alt}
               className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full object-cover"
             />
