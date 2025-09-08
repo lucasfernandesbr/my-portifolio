@@ -25,7 +25,7 @@ export default function Hero({ content }: HeroProps) {
   return (
     <Container id={id}>
       <div className="flex flex-1 justify-center">
-        <div className="xs:pt-8 xs:pb-8 xs:mt-18 xs:max-w-[468px] flex w-full flex-col items-center gap-12 lg:mt-0 lg:max-w-full lg:pt-20 lg:pb-20">
+        <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] mt-18 flex w-full flex-col items-center gap-12 lg:max-w-full lg:pt-20 lg:pb-20">
           <div className="flex items-center">
             <img
               src={images[ready_online.avatar.key]}
