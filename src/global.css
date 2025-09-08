@@ -205,11 +205,16 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-colors duration-200;
+
     font-family: var(--font-primary);
   }
 
-  body {
-    @apply bg-brand-white text-foreground;
+  html, body {
+    @apply bg-brand-white dark:bg-brand-black;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, span, a, li, button {
+    @apply text-brand-black dark:text-brand-white;
   }
 }

@@ -24,13 +24,11 @@ export default function AboutMe({ content }: AboutMeProps) {
           <img
             src={images[img.key]}
             alt={img.alt}
-            className="xs:w-full xs:h-[400px] max-w-[524px] rounded-lg object-cover object-[25%_75%] lg:h-[600px]"
+            className="xs:w-full xs:h-[400px] xs:object-[25%_60%] max-w-[524px] rounded-lg object-cover lg:h-[600px] lg:object-[25%_75%]"
           />
 
           <div className="xs:text-center flex w-full max-w-[600px] flex-col justify-center gap-10 lg:text-left">
-            <h1 className="xs:text-4xl text-brand-black text-5xl font-semibold">
-              {title}
-            </h1>
+            <h1 className="xs:text-4xl text-5xl font-semibold">{title}</h1>
 
             <div className="xs:text-center flex flex-col gap-6 text-justify lg:text-left">
               <Markdown content={about_me} />

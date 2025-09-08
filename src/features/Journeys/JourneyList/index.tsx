@@ -4,7 +4,7 @@ import { JourneyListProps } from './types'
 
 export default function JourneyList({ title, list }: JourneyListProps) {
   return (
-    <div className="xs:p-10 xs:first:pb-0 xs:last:pb-0 border-gray-30 last-pr-0 flex w-full flex-col pb-0 md:last:border-0 lg:border-r-1 lg:p-12 lg:pb-0">
+    <div className="xs:p-10 xs:first:pb-0 xs:last:pb-0 border-gray-20 last-pr-0 flex w-full flex-col pb-0 md:last:border-0 lg:border-r-1 lg:p-12 lg:pb-0">
       <div className="xs:justify-center flex lg:justify-start">
         <Text className="text-3xl font-semibold">{title}</Text>
       </div>
@@ -19,20 +19,20 @@ export default function JourneyList({ title, list }: JourneyListProps) {
                 </Text>
 
                 <div className="flex items-center gap-3">
-                  <div className="xs:hidden bg-gray-20 h-[12px] w-[12px] rounded-full lg:block" />
+                  <div className="xs:hidden bg-gray-40 h-[12px] w-[12px] rounded-full lg:block" />
 
-                  <Text className="xs:text-center text-gray-70 text-sm font-medium lg:text-left">
+                  <Text className="xs:text-center text-gray-70 dark:text-gray-20 text-sm font-medium lg:text-left">
                     {location_time}
                   </Text>
                 </div>
               </div>
 
               <div className="xs:text-center flex w-[200px] flex-col gap-3 lg:text-end">
-                <Text className="xs:font-normal xs:text-sm text-brand-black lg:font-semibold">
+                <Text className="xs:font-normal xs:text-sm lg:font-semibold">
                   {specialization}
                 </Text>
 
-                <Text className="xs:font-normal xs:text-sm text-brand-black lg:font-semibold">
+                <Text className="xs:font-normal xs:text-sm lg:font-semibold">
                   {qualification}
                 </Text>
               </div>

@@ -8,10 +8,6 @@ type CountryFlag = {
   label: string
 }
 
-type ModeSwitch = {
-  dark: IconName
-}
-
 type NavItem = {
   id: string
   label: string
@@ -20,7 +16,6 @@ type NavItem = {
 export type HeaderContent = {
   logo: IconName
   nav: NavItem[]
-  mode_switch: ModeSwitch
   countries: Record<Country, CountryFlag>
 }
 

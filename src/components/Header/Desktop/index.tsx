@@ -7,15 +7,16 @@ import Container from '@components/Container'
 import CountrySwitch from '@components/CountrySwitch'
 import Icon from '@components/Icon'
 
+import DarkModeSwitch from '../DarkModeSwitch'
 import { HeaderProps } from '../types'
 
 export default function Desktop({ content }: HeaderProps) {
-  const { logo, nav, mode_switch, countries } = content
+  const { logo, nav, countries } = content
 
   return (
     <Container>
       <div className="flex h-[88px] w-full items-center justify-between">
-        <Icon type={logo} color="#212227" />
+        <Icon className="text-brand-black dark:text-brand-white" type={logo} />
 
         <ul className="flex gap-14">
           {nav.map(({ id, label }) => (
@@ -32,7 +33,7 @@ export default function Desktop({ content }: HeaderProps) {
 
         <ul className="flex gap-8">
           <li>
-            <Icon type={mode_switch.dark} color="#212227" />
+            <DarkModeSwitch />
           </li>
           <li>
             <CountrySwitch icon="ChevronDown" countries={countries} />

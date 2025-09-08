@@ -23,9 +23,6 @@ export default {
         label: 'Curiosities',
       },
     ],
-    mode_switch: {
-      dark: 'Moon',
-    },
     countries: {
       us: {
         key: 'us',

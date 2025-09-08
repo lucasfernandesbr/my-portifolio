@@ -24,11 +24,11 @@ export default function CuriosityCard({
       <img
         src={images[image.key]}
         alt={image.alt}
-        className="bg-brand-black h-[216px] rounded-lg object-cover"
+        className="bg-brand-black dark:bg-gray-70 h-[216px] rounded-lg object-cover"
       />
 
       <div className="flex flex-col gap-5">
-        <h1 className="text-brand-black text-2xl font-semibold">{title}</h1>
+        <h1 className="text-2xl font-semibold">{title}</h1>
 
         <Text>{description}</Text>
       </div>

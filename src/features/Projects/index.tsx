@@ -11,8 +11,8 @@ export default function Projects({ content }: ProjectsProps) {
     <Container>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:gap-10 xs:max-w-[468px] flex w-full flex-col items-center lg:max-w-full lg:gap-20 lg:pt-20 lg:pb-20">
-          <div className="border-gray-30 flex w-full flex-col items-center gap-12 border-b-1 pb-12">
-            <h1 className="xs:text-4xl xs:text-center text-brand-black font-semibold lg:text-5xl">
+          <div className="border-gray-20 flex w-full flex-col items-center gap-12 border-b-1 pb-12">
+            <h1 className="xs:text-4xl xs:text-center font-semibold lg:text-5xl">
               {title}
             </h1>
 
