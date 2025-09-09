@@ -5,7 +5,7 @@ const syncAssetGlobs = {
 
 const asyncAssetGlobs = {
   images: import.meta.glob('./images/*.{jpg,png,webp}', {
-    eager: false,
+    eager: true,
   }),
 }
 

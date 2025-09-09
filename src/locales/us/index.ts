@@ -46,7 +46,7 @@ export default {
       label: 'Ready to code',
     },
     title:
-      'Web developer with solid experienced in JavaScript, specializing in React and Next.js. Focused on delivering reliable and high-quality digital solutions.',
+      'Web developer with solid experienced in JavaScript, specializing in React and Next.js. Focused on delivering reliable and high-quality scalable apps.',
     buttons: {
       scroll_down: {
         label: 'Scroll Down',
@@ -93,27 +93,14 @@ export default {
       alt: 'Portrait of Lucas Fernandes Souza',
     },
     title: 'A Bit About Me',
-    content: `i’m a Front-End Developer with over 3 years of experience,
-              specializing in React and Next.js. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. <br /> <br /> It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum. <br /> <br />
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.`,
+    content: `I’m a Frontend Developer based in São Paulo, Brazil, specialized in React, Next.js, TypeScript and E2E testing.<br /><br /> 
+      Over the last few years, I’ve worked at Wellhub (formerly Gympass) with the Business Acquisition team, contributing to the unlogged website and the SMB flow, developing reusable components, implementing automated testing, and integrating with platforms like Salesforce, Hubspot, Segment, and Amplitude.<br /><br /> 
+      My daily work involves collaborating with international teams, applying Agile methodologies, and ensuring technical solutions align with business goals.`,
   },
   expertises: {
     id: 'expertises',
     title: 'My Skills & Expertises',
-    description: `It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. It was
-                  popularised in the 1960s with the release of Letraset sheets
-                  containing Lorem Ipsum passages.`,
+    description: `Hands-on experience with modern frontend technologies, focusing on performance, scalability, and user experience.`,
     techs: [
       {
         key: 'javascript',
@@ -160,12 +147,7 @@ export default {
   journeys: {
     id: 'journeys',
     title: 'My Journeys',
-    description: `It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. It was
-                  popularised in the 1960s with the release of Letraset sheets
-                  containing Lorem Ipsum passages, and more recently with desktop
-                  publishing software like Aldus PageMaker including versions of Lorem
-                  Ipsum.`,
+    description: `Professional journey spanning technical support and frontend development, with experience in large-scale systems, modern web technologies, and international collaboration.`,
     professional: {
       title: 'Professional',
       journey: [
@@ -202,55 +184,45 @@ export default {
     },
   },
   projects: {
+    id: 'projects',
     title: 'A Few Projects That I’ve Worked',
-    description: `i’m a Front-End Developer with over 3 years of experience,
-                  specializing in React and Next.js. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.`,
+    description: `A showcase of professional and personal projects, highlighting expertise in scalable frontend development, system integrations, and modern practices.`,
     items: [
       {
-        title: 'Project 1',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Wellhub – SMB Flow',
+        description: `Contribution to the SMB acquisition flow, implementing experimentation (A/B testing), feature flags, and strategic integrations with Salesforce, Hubspot, Segment, and Amplitude.`,
+        img: {
+          key: 'wellhub_smb_flow',
+          alt: 'Project 1 - Wellhub SMB Flow',
         },
       },
       {
-        title: 'Project 2',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Wellhub – Unlogged Website',
+        description: `Development and maintenance of the company’s public website, focused on performance, component reusability, and integrations with CRM and analytics platforms.`,
+        img: {
+          key: 'wellhub_website',
+          alt: 'Project 2 - Wellhub Unlogged Website',
         },
         variant: 'inverted',
       },
       {
-        title: 'Project 3',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Portfolio Website',
+        description: `Designed and developed my personal portfolio using React, Vite, TailwindCSS, and Zustand, showcasing my frontend expertise and UI implementation skills.`,
+        img: {
+          key: 'portifolio',
+          alt: 'Project 3 - Portfolio Website',
         },
       },
     ],
   },
   curiosities: {
+    id: 'curiosities',
     title: 'Curiosities About Myself',
-    description: `i’m a Front-End Developer with over 3 years of experience,
-                  specializing in React and Next.js. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.`,
+    description: `Beyond technology, I’m passionate about dance, travel, and gaming. These passions inspire me to bring creativity, exploration, and problem-solving into my journey as a developer.`,
     items: [
       {
         title: 'Dance Student',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `I grew up surrounded by R&B and Hip Hop culture, and I study and practice Hip Hop dance as a hobby. Dance and music give me purpose, balance, and creativity beyond technology.`,
         image: {
           key: 'dance_student',
           alt: 'Dance Student',
@@ -258,9 +230,7 @@ export default {
       },
       {
         title: 'Gamer',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `I have been passionate about games and technology since childhood, and this passion led me to choose software development as a career. Gaming sparked my curiosity for computers, systems, and innovation.`,
         image: {
           key: 'gamer',
           alt: 'Gaming Setup',
@@ -268,9 +238,7 @@ export default {
       },
       {
         title: 'Travel Lover',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `I truly enjoy exploring new cultures and histories. Traveling through Europe gave me the chance to learn and adapt to different perspectives, which I find inspiring.`,
         image: {
           key: 'travel',
           alt: 'Travel Lover',

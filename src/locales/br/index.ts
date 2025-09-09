@@ -93,28 +93,14 @@ export default {
       alt: 'Retrato de Lucas Fernandes Souza',
     },
     title: 'Um Pouco Sobre Mim',
-    content: `Sou Desenvolvedor Front-End com mais de 3 anos de experiência,
-              especializado em React e Next.js. Lorem Ipsum é um texto fictício
-              da indústria tipográfica e de impressão desde os anos 1500, quando
-              um impressor desconhecido embaralhou os tipos para fazer um livro
-              de modelos. <br /> <br /> Sobreviveu não apenas a cinco séculos,
-              mas também à transição para a editoração eletrônica, permanecendo
-              essencialmente inalterado. Foi popularizado nos anos 1960 com o
-              lançamento das folhas de Letraset contendo trechos de Lorem Ipsum,
-              e mais recentemente com softwares de editoração como Aldus PageMaker
-              incluindo versões do Lorem Ipsum. <br /> <br /> Ao contrário do que
-              se acredita, Lorem Ipsum não é apenas texto aleatório. Tem raízes
-              em um trecho da literatura clássica em latim de 45 a.C., com mais
-              de 2000 anos de idade.`,
+    content: `Sou Desenvolvedor Frontend, baseado em São Paulo, especializado em React, Next.js, TypeScript e testes E2E.<br /><br />  
+      Nos últimos anos, atuei na Wellhub (antiga Gympass) junto ao time de Business Acquisition, contribuindo para o site público (unlogged) e o fluxo de SMB, desenvolvendo componentes reutilizáveis, implementando testes automatizados e integrando plataformas como Salesforce, Hubspot, Segment e Amplitude.<br /><br /> 
+      Meu trabalho diário envolve colaboração com equipes internacionais, aplicação de metodologias ágeis e alinhamento das soluções técnicas com os objetivos de negócio.`,
   },
   expertises: {
     id: 'expertises',
     title: 'Minhas Habilidades & Especialidades',
-    description: `Sobreviveu não apenas a cinco séculos, mas também à transição para
-                  a editoração eletrônica, permanecendo essencialmente inalterado. Foi
-                  popularizado nos anos 1960 com o lançamento das folhas de Letraset
-                  contendo trechos de Lorem Ipsum, e mais recentemente com softwares
-                  de editoração como Aldus PageMaker incluindo versões do Lorem Ipsum.`,
+    description: `Experiência prática com tecnologias modernas de frontend, com foco em performance, escalabilidade e experiência do usuário`,
     techs: [
       {
         key: 'javascript',
@@ -161,94 +147,82 @@ export default {
   journeys: {
     id: 'journeys',
     title: 'Minhas Jornadas',
-    description: `Sobreviveu não apenas a cinco séculos, mas também à transição para
-                  a editoração eletrônica, permanecendo essencialmente inalterado. Foi
-                  popularizado nos anos 1960 com o lançamento das folhas de Letraset
-                  contendo trechos de Lorem Ipsum, e mais recentemente com softwares
-                  de editoração como Aldus PageMaker incluindo versões do Lorem Ipsum.`,
+    description: `Jornada profissional que abrange suporte técnico e desenvolvimento frontend, com experiência em sistemas de grande escala, tecnologias web modernas e colaboração internacional.`,
     professional: {
-      title: 'Professional',
+      title: 'Profissional',
       journey: [
         {
           institution: 'Wellhub',
-          location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
-          qualification: 'Frontend Developer',
+          location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
+          qualification: 'Desenvolvedor Frontend',
+          specialization: 'B2B Acquisition Team',
         },
         {
           institution: 'Wittel Comunicações LTDA',
-          location_time: 'São Paulo, SP, Brazil, 2018 - 2021',
-          qualification: 'Technical Support',
+          location_time: 'São Paulo, SP, Brasil, 2018 - 2021',
+          qualification: 'Suporte Técnico',
+          specialization: 'IPC Tech Team',
         },
       ],
     },
     academic: {
-      title: 'Academic',
+      title: 'Acadêmico',
       journey: [
         {
           institution: 'Rocketseat',
-          location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
+          location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
           qualification: 'Fullstack',
           specialization: 'React, React Native and Node',
         },
         {
           institution: 'FMU - Centro Universitário',
-          location_time: 'São Paulo, SP, Brazil, 2016 - 2019',
-          qualification: 'Degree',
-          specialization: 'Systems Analysis and Development',
+          location_time: 'São Paulo, SP, Brasil, 2016 - 2019',
+          qualification: 'CST',
+          specialization: 'Análise e Desenvolvimento de Sistemas',
         },
       ],
     },
   },
   projects: {
-    title: 'A Few Projects That I’ve Worked',
-    description: `i’m a Front-End Developer with over 3 years of experience,
-                  specializing in React and Next.js. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.`,
+    id: 'projects',
+    title: 'Projetos em que trabalhei',
+    description: `Uma vitrine de projetos profissionais e pessoais, destacando experiência em desenvolvimento frontend escalável, integrações de sistemas e práticas modernas.`,
     items: [
       {
-        title: 'Project 1',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Wellhub – SMB Flow',
+        description: `Atuação no fluxo de aquisição SMB, implementando experimentação (A/B testing), feature flags e integrações estratégicas com Salesforce, Hubspot, Segment e Amplitude.`,
+        img: {
+          key: 'wellhub_smb_flow',
+          alt: 'Projeto 1 - Wellhub SMB Flow',
         },
       },
       {
-        title: 'Project 2',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Wellhub – Website Público (Unlogged)',
+        description: `Desenvolvimento e manutenção do site público da empresa, com foco em performance, reutilização de componentes e integrações com plataformas de CRM e Analytics.`,
+        img: {
+          key: 'wellhub_website',
+          alt: 'Projeto 2 - Wellhub Website Público (Unlogged)',
         },
-        vvariant: 'inverted',
+        variant: 'inverted',
       },
       {
-        title: 'Project 3',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
-        image: {
-          src: '',
-          alt: '',
+        title: 'Website Portfólio',
+        description: `Design e desenvolvimento do meu portfólio pessoal utilizando React, Vite, TailwindCSS e Zustand, demonstrando minha experiência em frontend e implementação de interfaces.`,
+        img: {
+          key: 'portifolio',
+          alt: 'Projeto 3 - Portfolio Website',
         },
       },
     ],
   },
   curiosities: {
-    title: 'Curiosities About Myself',
-    description: `i’m a Front-End Developer with over 3 years of experience,
-                  specializing in React and Next.js. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.`,
+    id: 'curiosities',
+    title: 'Curiosidades Sobre Mim',
+    description: `Além da tecnologia, sou apaixonado por dança, viagens e games. Essas paixões me inspiram a trazer criatividade, exploração e resolução de problemas para minha jornada como desenvolvedor.`,
     items: [
       {
         title: 'Dance Student',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `Cresci envolvido com a cultura R&B e Hip Hop, e estudo e pratico dança Hip Hop como hobby. A dança e a música me trazem propósito, equilíbrio e criatividade além da tecnologia.`,
         image: {
           key: 'dance_student',
           alt: 'Dance Student',
@@ -256,9 +230,7 @@ export default {
       },
       {
         title: 'Gamer',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `Desde criança sou apaixonado por games e tecnologia, e essa paixão me levou a escolher o desenvolvimento como profissão. Os jogos despertaram minha curiosidade por computadores, sistemas e inovação.`,
         image: {
           key: 'gamer',
           alt: 'Gaming Setup',
@@ -266,9 +238,7 @@ export default {
       },
       {
         title: 'Travel Lover',
-        description: `i’m a Front-End Developer with over 3 years of experience,
-                      specializing in React and Next.js. Lorem Ipsum has been the
-                      industry's standard dummy text ever since the 1500s.`,
+        description: `Gosto muito de explorar novas culturas e histórias. Viajar pela Europa me deu a oportunidade de aprender e me adaptar a diferentes perspectivas, algo que considero inspirador.`,
         image: {
           key: 'travel',
           alt: 'Travel Lover',

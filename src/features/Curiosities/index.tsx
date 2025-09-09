@@ -11,7 +11,7 @@ import { CuriositiesProps } from './types'
 export default function Curiosities({ content }: CuriositiesProps) {
   const { images, loadImages } = useAssets()
 
-  const { title, description, items } = content
+  const { id, title, description, items } = content
 
   const hasImages = Object.keys(images).length
 
@@ -20,7 +20,7 @@ export default function Curiosities({ content }: CuriositiesProps) {
   }, [images, loadImages])
 
   return (
-    <Container>
+    <Container id={id}>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:gap-10 xs:max-w-[468px] xs:items-center flex w-full flex-col lg:max-w-full lg:gap-14 lg:pt-20 lg:pb-20">
           <div className="border-gray-30 flex flex-col items-center gap-7">
