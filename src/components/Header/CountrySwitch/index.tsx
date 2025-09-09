@@ -1,8 +1,7 @@
 import { useState } from 'react'
 
+import useCountry from '@/stores/useCountry'
 import { Country } from '@/types/global'
-
-import { useCountrySwitch } from '@contexts/CountrySwitch'
 
 import Icon from '@components/Icon'
 
@@ -13,7 +12,7 @@ import { CountrySwitchProps } from './types'
 export default function CountrySwitch({ icon, countries }: CountrySwitchProps) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { country, toggleCountry } = useCountrySwitch()
+  const { country, toggleCountry } = useCountry()
   const { flags } = useAssets()
 
   const formatCountries: any[] = Object.entries(countries).map(
