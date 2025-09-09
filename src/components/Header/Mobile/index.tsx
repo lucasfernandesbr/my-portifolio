@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { scrollToId } from '@utils/scrollToId'
 
 import Anchor from '@components/Anchor'
-import CountrySwitch from '@components/CountrySwitch'
+import CountrySwitch from '@components/Header/CountrySwitch'
 import Icon from '@components/Icon'
 
 import DarkModeSwitch from '../DarkModeSwitch'

@@ -4,7 +4,7 @@ import { scrollToId } from '@utils/scrollToId'
 
 import Anchor from '@components/Anchor'
 import Container from '@components/Container'
-import CountrySwitch from '@components/CountrySwitch'
+import CountrySwitch from '@components/Header/CountrySwitch'
 import Icon from '@components/Icon'
 
 import DarkModeSwitch from '../DarkModeSwitch'
@@ -35,7 +35,7 @@ export default function Desktop({ content }: HeaderProps) {
             ))}
           </ul>
 
-          <ul className="flex gap-8">
+          <ul className="flex h-[24px] gap-8">
             <li>
               <DarkModeSwitch />
             </li>
