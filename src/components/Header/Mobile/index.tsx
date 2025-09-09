@@ -18,6 +18,14 @@ export default function Mobile({ content }: HeaderProps) {
     setIsOpen(!isOpen)
   }
 
+  const handleHeaderOptionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    scrollToId(e, id)
+    setIsOpen(false)
+  }
+
   return (
     <div className="bg-brand-white dark:bg-brand-black fixed top-0 z-9999 w-full">
       <div className="p-6">
@@ -53,9 +61,7 @@ export default function Mobile({ content }: HeaderProps) {
                 <li>
                   <Anchor
                     label={label}
-                    onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                      scrollToId(e, id)
-                    }
+                    onClick={(e) => handleHeaderOptionClick(e, id)}
                   />
                 </li>
               ))}
