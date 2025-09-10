@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
-import useAssets from '@/stores/useAssets'
-import useCountry from '@/stores/useCountry'
 import { Country } from '@/types/global'
+
+import useAssets from '@stores/useAssets'
+import useCountry from '@stores/useCountry'
 
 import Icon from '@components/Icon'
 

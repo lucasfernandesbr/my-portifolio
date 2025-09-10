@@ -77,7 +77,7 @@ export default [
             ['^@utils'],
             ['^@locales'],
             ['^@types'],
-            ['^@contexts'],
+            ['^@stores'],
             ['^@hooks'],
             ['^@features'],
             ['^@components'],

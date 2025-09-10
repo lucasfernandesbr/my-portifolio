@@ -15,11 +15,11 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
       '@locales': path.resolve(__dirname, './src/locales'),
       '@types': path.resolve(__dirname, './src/types'),
-      '@contexts': path.resolve(__dirname, './src/contexts'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@features': path.resolve(__dirname, './src/features'),
       '@components': path.resolve(__dirname, './src/components'),
       '@assets': path.resolve(__dirname, './src/assets'),
+      '@stores': path.resolve(__dirname, './src/stores'),
     },
   },
 })

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-import { getAsyncAssets, getSyncAssets } from '@/stores/useAssets/getAssets'
+import { getAsyncAssets, getSyncAssets } from '@stores/useAssets/getAssets'
 
 import { AssetsState } from './types'
 

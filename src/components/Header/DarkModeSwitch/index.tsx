@@ -1,4 +1,4 @@
-import useDarkModeTheme from '@/stores/useDarkModeTheme'
+import useDarkModeTheme from '@stores/useDarkModeTheme'
 
 import Icon from '@components/Icon'
 

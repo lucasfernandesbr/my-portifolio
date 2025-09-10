@@ -1,13 +1,12 @@
 import { useEffect } from 'react'
 
-import useAssets from '@/stores/useAssets'
-
 import { scrollToId } from '@utils/scrollToId'
+
+import useAssets from '@stores/useAssets'
 
 import Anchor from '@components/Anchor'
 import Container from '@components/Container'
 import Markdown from '@components/Markdown'
-import Text from '@components/Text'
 
 import { HeroProps } from './types'
 
@@ -33,9 +32,9 @@ export default function Hero({ content }: HeroProps) {
               className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full object-cover"
             />
             <div className="bg-support-02 mr-2 h-[8px] w-[8px] rounded-full" />
-            <Text className="text-xs font-semibold uppercase">
+            <p className="text-xs font-semibold uppercase">
               {ready_online.label}
-            </Text>
+            </p>
           </div>
 
           <h1 className="text-brand-black xs:text-4xl text-center font-extrabold md:text-5xl lg:text-7xl">

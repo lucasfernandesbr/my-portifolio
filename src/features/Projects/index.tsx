@@ -1,5 +1,4 @@
 import Container from '@components/Container'
-import Text from '@components/Text'
 
 import ProjectCard from './ProjectCard'
 import { ProjectsProps } from './types'
@@ -16,9 +15,7 @@ export default function Projects({ content }: ProjectsProps) {
               {title}
             </h1>
 
-            <Text className="w-full max-w-[640px] text-center">
-              {description}
-            </Text>
+            <p className="w-full max-w-[640px] text-center">{description}</p>
           </div>
 
           {items.map(({ title, description, img, variant }) => (

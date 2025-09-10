@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils'
-import useAssets from '@/stores/useAssets'
-import { invertIcons } from '@/stores/useAssets/getAssets'
+
+import useAssets from '@stores/useAssets'
+import { invertIcons } from '@stores/useAssets/getAssets'
 
 import Container from '@components/Container'
-import Text from '@components/Text'
 
 import { ExpertisesProps } from './types'
 
@@ -19,7 +19,7 @@ export default function Expertises({ content }: ExpertisesProps) {
           <div className="xs:text-center xs:items-center flex flex-col gap-10 lg:items-start lg:text-left">
             <h1 className="xs:text-4xl text-5xl font-semibold">{title}</h1>
 
-            <Text className="w-full max-w-[640px]">{description}</Text>
+            <p className="w-full max-w-[640px]">{description}</p>
           </div>
 
           <ul className="xs:flex-wrap xs:gap-10 xs:justify-center flex w-full lg:justify-between">

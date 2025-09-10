@@ -1,6 +1,5 @@
 import Container from '@components/Container'
 import Icon from '@components/Icon'
-import Text from '@components/Text'
 
 import { IntroductionProps } from './types'
 
@@ -14,13 +13,11 @@ export default function Introduction({ content }: IntroductionProps) {
           {cards.map(({ title, icon, content }) => (
             <li className="flex max-w-[180px] flex-col items-center gap-2 text-center">
               {title && (
-                <Text className="xs:text-3xl font-bold lg:text-4xl">
-                  {title}
-                </Text>
+                <p className="xs:text-3xl font-bold lg:text-4xl">{title}</p>
               )}
               {icon && <Icon type={icon} size={40} />}
 
-              <Text className="xs:text-base lg:text-lg">{content}</Text>
+              <p className="xs:text-base lg:text-lg">{content}</p>
             </li>
           ))}
         </ul>

@@ -1,5 +1,4 @@
 import Container from '@components/Container'
-import Text from '@components/Text'
 
 import JourneyList from './JourneyList'
 import { JourneysProps } from './types'
@@ -14,9 +13,7 @@ export default function Journeys({ content }: JourneysProps) {
           <div className="flex flex-col items-center gap-10">
             <h1 className="xs:text-4xl text-5xl font-semibold">{title}</h1>
 
-            <Text className="w-full max-w-[640px] text-center">
-              {description}
-            </Text>
+            <p className="w-full max-w-[640px] text-center">{description}</p>
           </div>
 
           <div className="xs:flex-col border-gray-20 dark:border-gray-80 flex border-t-1 lg:flex-row">

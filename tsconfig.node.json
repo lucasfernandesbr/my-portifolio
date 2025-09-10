@@ -22,12 +22,12 @@
       "@utils/*": ["./src/utils/*"],
       "@locales/*": ["./src/locales/*"],
       "@/types/*": ["./src/types/*"],
-      "@contexts/*": ["./src/contexts/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@features/*": ["./src/features/*"],
       "@components/*": ["./src/components/*"],
       "@assets/*": ["./src/assets/*"],
       "@assets": ["./src/assets/index.ts"],
+      "@stores/*": ["./src/stores/*"],
     }
   },
   "include": ["vite.config.ts"]

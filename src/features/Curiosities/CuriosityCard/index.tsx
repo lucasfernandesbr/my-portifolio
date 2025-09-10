@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 
-import Text from '@/components/Text'
-import useAssets from '@/stores/useAssets'
+import useAssets from '@stores/useAssets'
 
 import { CuriosityCardProps } from './types'
 
@@ -29,7 +28,7 @@ export default function CuriosityCard({
       <div className="flex flex-col gap-5">
         <h1 className="text-2xl font-semibold">{title}</h1>
 
-        <Text>{description}</Text>
+        <p>{description}</p>
       </div>
     </div>
   )

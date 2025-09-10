@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 import { tv } from 'tailwind-variants'
 
-import Text from '@/components/Text'
-import useAssets from '@/stores/useAssets'
+import useAssets from '@stores/useAssets'
 
 import { ProjectCardProps } from './types'
 
@@ -36,7 +35,7 @@ export default function ProjectCard({
           {title}
         </h1>
 
-        <Text>{description}</Text>
+        <p>{description}</p>
       </div>
 
       <div className="xs:w-full xs:max-w-[320px] xs:h-[216px] lg:h-[368px] lg:w-1/2 lg:max-w-none">

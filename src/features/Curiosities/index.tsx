@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
 
-import useAssets from '@/stores/useAssets'
+import useAssets from '@stores/useAssets'
 
 import Container from '@components/Container'
-import Text from '@components/Text'
 
 import CuriosityCard from './CuriosityCard'
 import { CuriositiesProps } from './types'
@@ -28,9 +27,7 @@ export default function Curiosities({ content }: CuriositiesProps) {
               {title}
             </h1>
 
-            <Text className="w-full max-w-[640px] text-center">
-              {description}
-            </Text>
+            <p className="w-full max-w-[640px] text-center">{description}</p>
           </div>
 
           <ul className="xs:flex-col flex justify-between gap-10 lg:flex-row">
