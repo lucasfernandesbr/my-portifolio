@@ -1,11 +1,10 @@
 import { useState } from 'react'
 
+import useAssets from '@/stores/useAssets'
 import useCountry from '@/stores/useCountry'
 import { Country } from '@/types/global'
 
 import Icon from '@components/Icon'
-
-import useAssets from '@assets'
 
 import { CountrySwitchProps } from './types'
 

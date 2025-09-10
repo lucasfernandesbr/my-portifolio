@@ -1,10 +1,10 @@
 const syncAssetGlobs = {
-  techs: import.meta.glob('./techs/*.svg', { eager: true }),
-  flags: import.meta.glob('./flags/*.webp', { eager: true }),
+  techs: import.meta.glob('../../assets/techs/*.svg', { eager: true }),
+  flags: import.meta.glob('../../assets/flags/*.webp', { eager: true }),
 }
 
 const asyncAssetGlobs = {
-  images: import.meta.glob('./images/*.{jpg,png,webp}', {
+  images: import.meta.glob('../../assets/images/*.{jpg,png,webp}', {
     eager: true,
   }),
 }

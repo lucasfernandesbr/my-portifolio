@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 
+import useAssets from '@/stores/useAssets'
+
 import Container from '@components/Container'
 import Markdown from '@components/Markdown'
-
-import useAssets from '@assets'
 
 import { AboutMeProps } from './types'
 

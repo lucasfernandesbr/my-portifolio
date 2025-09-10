@@ -2,8 +2,7 @@ import { useEffect } from 'react'
 import { tv } from 'tailwind-variants'
 
 import Text from '@/components/Text'
-
-import useAssets from '@assets'
+import useAssets from '@/stores/useAssets'
 
 import { ProjectCardProps } from './types'
 

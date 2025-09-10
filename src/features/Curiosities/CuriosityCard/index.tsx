@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 
 import Text from '@/components/Text'
-
-import useAssets from '@assets'
+import useAssets from '@/stores/useAssets'
 
 import { CuriosityCardProps } from './types'
 

@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 
+import useAssets from '@/stores/useAssets'
+
 import { scrollToId } from '@utils/scrollToId'
 
 import Anchor from '@components/Anchor'
 import Container from '@components/Container'
 import Markdown from '@components/Markdown'
 import Text from '@components/Text'
-
-import useAssets from '@assets'
 
 import { HeroProps } from './types'
 

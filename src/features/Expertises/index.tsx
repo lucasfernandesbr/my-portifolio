@@ -1,10 +1,9 @@
-import { invertIcons } from '@/assets/getAssets'
 import { cn } from '@/lib/utils'
+import useAssets from '@/stores/useAssets'
+import { invertIcons } from '@/stores/useAssets/getAssets'
 
 import Container from '@components/Container'
 import Text from '@components/Text'
-
-import useAssets from '@assets'
 
 import { ExpertisesProps } from './types'
 
