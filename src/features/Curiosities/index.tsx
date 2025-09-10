@@ -30,7 +30,7 @@ export default function Curiosities({ content }: CuriositiesProps) {
             <p className="w-full max-w-[640px] text-center">{description}</p>
           </div>
 
-          <ul className="xs:flex-col flex justify-between gap-10 lg:flex-row">
+          <ul className="xs:flex-col flex w-full justify-between gap-10 lg:flex-row">
             {items.map(({ title, description, image }) => (
               <li key={title}>
                 <CuriosityCard

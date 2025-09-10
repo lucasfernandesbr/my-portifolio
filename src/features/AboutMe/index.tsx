@@ -20,7 +20,7 @@ export default function AboutMe({ content }: AboutMeProps) {
   return (
     <Container id={id}>
       <div className="flex flex-1 justify-center">
-        <div className="xs:pt-8 xs:pb-8 xs:flex-col xs:gap-12 xs:max-w-[468px] flex w-full items-center justify-between pt-20 pb-20 lg:max-w-full lg:flex-row">
+        <div className="xs:pt-8 xs:pb-8 xs:flex-col xs:gap-12 xs:max-w-[468px] flex w-full items-center justify-between lg:max-w-full lg:flex-row lg:pt-20 lg:pb-20">
           <img
             src={images[img.key]}
             alt={img.alt}
