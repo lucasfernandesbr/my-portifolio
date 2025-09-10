@@ -6,7 +6,7 @@ import router from './routes'
 function App() {
   return (
     <HelmetProvider>
-      <Helmet title="Lucas Fernandes Souza | My Portifolio" />
+      <Helmet title="Lucas Fernandes Souza | My Portfolio" />
 
       <RouterProvider router={router} />
     </HelmetProvider>
