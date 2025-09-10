@@ -9,6 +9,11 @@ const asyncAssetGlobs = {
   }),
 }
 
+export const invertIcons: Record<string, boolean> = {
+  nextjs: true,
+  cypress: true,
+}
+
 export function getSyncAssets(type: keyof typeof syncAssetGlobs) {
   const files = syncAssetGlobs[type]
 

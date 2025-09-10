@@ -1,3 +1,6 @@
+import { invertIcons } from '@/assets/getAssets'
+import { cn } from '@/lib/utils'
+
 import Container from '@components/Container'
 import Text from '@components/Text'
 
@@ -21,14 +24,22 @@ export default function Expertises({ content }: ExpertisesProps) {
           </div>
 
           <ul className="xs:flex-wrap xs:gap-10 xs:justify-center flex w-full lg:justify-between">
-            {techs.map(({ key, alt }) => (
-              <li
-                key={alt}
-                className="xs:h-8 flex items-center rounded-sm lg:h-10"
-              >
-                <img className="h-full" src={techsAssets[key]} alt={alt} />
-              </li>
-            ))}
+            {techs.map(({ key, alt }) => {
+              const inverted = invertIcons[key] && 'invert-0 filter dark:invert'
+
+              return (
+                <li
+                  key={alt}
+                  className="xs:h-8 flex items-center rounded-sm lg:h-10"
+                >
+                  <img
+                    className={cn('h-full', inverted)}
+                    src={techsAssets[key]}
+                    alt={alt}
+                  />
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>

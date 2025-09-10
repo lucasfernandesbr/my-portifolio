@@ -19,10 +19,7 @@ export default function Journeys({ content }: JourneysProps) {
             </Text>
           </div>
 
-          <div
-            id="journeys"
-            className="xs:flex-col border-gray-20 flex border-t-1 lg:flex-row"
-          >
+          <div className="xs:flex-col border-gray-20 dark:border-gray-80 flex border-t-1 lg:flex-row">
             <JourneyList
               icon={professional.icon}
               title={professional.title}

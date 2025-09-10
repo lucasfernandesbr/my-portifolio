@@ -17,7 +17,7 @@ const anchorVariants = tv({
       socialMedia:
         'bg-gray-20 text-gray-70 hover:text-support-01 h-[40px] w-[40px] rounded-lg',
       button:
-        'bg-brand-black dark:bg-support-01 text-brand-white dark:text-brand-white h-[40px] p-3 rounded-lg hover:bg-gray-100',
+        'bg-brand-black dark:bg-support-01 text-brand-white dark:text-brand-white h-[40px] p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-support-03',
     },
   },
   defaultVariants: {

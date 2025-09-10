@@ -35,7 +35,7 @@ export default function Footer({ content }: FooterProps) {
             </ul>
           </div>
 
-          <div className="bg-gray-20 h-[1px] w-full" />
+          <div className="bg-gray-20 dark:bg-gray-80 h-[1px] w-full" />
 
           <p className="xs:text-center lg:text-left">{copyright}</p>
         </div>

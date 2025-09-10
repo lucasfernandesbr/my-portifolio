@@ -23,8 +23,7 @@
   --gray-100: #111111;
   --support-01: #2970FF;
   --support-02: #47CD89;
-  /* --font-7xl: 8.0rem;
-  --font-size: 62.5%; */
+  --support-03: #2560D9;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -96,7 +95,6 @@
 }
 
 @theme inline {
-  /* --text-7xl: var(--font-7xl); */
   --color-brand-black: var(--brand-black);
   --color-brand-white: var(--brand-white);
   --color-gray-10: var(--gray-10);
@@ -111,6 +109,7 @@
   --color-gray-100: var(--gray-100);
   --color-support-01: var(--support-01);
   --color-support-02: var(--support-02);
+  --color-support-03: var(--support-03);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -151,56 +150,6 @@
 
 @theme {
   --breakpoint-xs: 20rem;
-}
-
-@keyframes animation-down {
-	from {
-		height: 0;
-	}
-	to {
-		height: var(--radix-accordion-content-height);
-	}
-}
-
-@keyframes animation-up {
-	from {
-		height: var(--radix-accordion-content-height);
-	}
-	to {
-		height: 0;
-	}
-}
-
-.font-primary {
-  font-family: var(--font-primary);
-}
-
-.font-secondary {
-  font-family: var(--font-secondary);
-}
-
-.accordion-icon {
-  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
-}
-
-.accordion-chevron {
-	transition: transform 300ms;
-}
-
-.accordion-trigger[data-state="open"] > .accordion-chevron {
-	transform: rotate(180deg);
-}
-
-.accordion-content {
-	overflow: hidden;
-}
-
-.accordion-content[data-state="open"] {
-	animation: animation-down 300ms ease-out;
-}
-
-.accordion-content[data-state="closed"] {
-	animation: animation-up 300ms ease-out;
 }
 
 @layer base {
