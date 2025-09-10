@@ -1,9 +1,9 @@
-import UseDarkModeTheme from '@/stores/UseDarkModeTheme'
+import useDarkModeTheme from '@/stores/useDarkModeTheme'
 
 import Icon from '@components/Icon'
 
 export default function DarkModeSwitch() {
-  const { isDarkMode, toggle } = UseDarkModeTheme()
+  const { isDarkMode, toggle } = useDarkModeTheme()
 
   const icon = isDarkMode ? 'Sun' : 'Moon'
 

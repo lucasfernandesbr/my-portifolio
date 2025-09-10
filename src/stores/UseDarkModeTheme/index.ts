@@ -2,7 +2,7 @@ import { create } from 'zustand'
 
 import { UseDarkModeThemeState } from './types'
 
-const UseDarkModeTheme = create<UseDarkModeThemeState>((set, get) => ({
+const useDarkModeTheme = create<UseDarkModeThemeState>((set, get) => ({
   isDarkMode: false,
 
   setDarkMode: (value) => {
@@ -16,4 +16,4 @@ const UseDarkModeTheme = create<UseDarkModeThemeState>((set, get) => ({
   },
 }))
 
-export default UseDarkModeTheme
+export default useDarkModeTheme
