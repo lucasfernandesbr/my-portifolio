@@ -27,9 +27,9 @@ export default function Mobile({ content }: HeaderProps) {
   }
 
   return (
-    <div className="bg-brand-white dark:bg-brand-black fixed top-0 z-9999 w-full">
+    <div className="bg-brand-white dark:bg-brand-black fixed top-0 z-9999 block w-full lg:hidden">
       <div className="p-6">
-        <div className="flex justify-between">
+        <div className="flex h-[24px] justify-between">
           <button onClick={handleOpenMenu}>
             {!isOpen ? (
               <Icon
