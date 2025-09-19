@@ -22,18 +22,16 @@ export default function Projects({ content }: ProjectsProps) {
             initial="hidden"
             animate={shouldShowSection}
             variants={{
-              hidden: { opacity: 0, y: 20 },
+              hidden: { opacity: 0, x: -20 },
               show: {
                 opacity: 1,
-                y: 0,
+                x: 0,
                 transition: { duration: 0.3, ease: 'easeInOut', delay: 0.2 },
               },
             }}
             className="border-gray-20 dark:border-gray-80 flex w-full flex-col items-center gap-12 border-b-1 pb-12"
           >
             <motion.h1
-              initial="hidden"
-              animate={shouldShowSection}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 show: {
@@ -77,7 +75,7 @@ export default function Projects({ content }: ProjectsProps) {
                 initial="hidden"
                 animate={shouldShowSection}
                 variants={{
-                  hidden: { opacity: 0, x: index % 2 === 0 ? -60 : 60 },
+                  hidden: { opacity: 0, x: index % 2 === 0 ? -20 : 20 },
                   show: {
                     opacity: 1,
                     x: 0,
