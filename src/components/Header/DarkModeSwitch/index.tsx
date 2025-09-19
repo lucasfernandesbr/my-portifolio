@@ -8,7 +8,7 @@ export default function DarkModeSwitch() {
   const icon = isDarkMode ? 'Sun' : 'Moon'
 
   return (
-    <button onClick={toggle}>
+    <button className="cursor-pointer" onClick={toggle}>
       <Icon type={icon} className="text-brand-black dark:text-brand-white" />
     </button>
   )
