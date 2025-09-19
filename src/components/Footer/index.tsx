@@ -1,7 +1,7 @@
 import { scrollToId } from '@utils/scrollToId'
 
 import Anchor from '@components/Anchor'
-import Container from '@components/Container'
+import Section from '@components/Section'
 
 import { FooterProps } from './types'
 
@@ -9,7 +9,7 @@ export default function Footer({ content }: FooterProps) {
   const { nav, socials, copyright } = content
 
   return (
-    <Container>
+    <Section>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:gap-12 xs:max-w-[468px] flex w-full flex-col gap-12 lg:max-w-full lg:pt-20 lg:pb-20">
           <div className="xs:flex-col-reverse xs:gap-10 flex w-full items-center justify-between lg:flex-row">
@@ -40,6 +40,6 @@ export default function Footer({ content }: FooterProps) {
           <p className="xs:text-center lg:text-left">{copyright}</p>
         </div>
       </div>
-    </Container>
+    </Section>
   )
 }
