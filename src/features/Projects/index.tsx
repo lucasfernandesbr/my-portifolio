@@ -17,7 +17,7 @@ export default function Projects({ content }: ProjectsProps) {
   return (
     <Section ref={ref} id={id}>
       <div className="flex flex-1 justify-center">
-        <div className="xs:pt-8 xs:pb-8 xs:gap-10 xs:max-w-[468px] flex w-full flex-col items-center lg:max-w-full lg:gap-20 lg:pt-20 lg:pb-20">
+        <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] xs:gap-10 flex w-full flex-col items-center lg:max-w-full lg:gap-20 lg:pt-20 lg:pb-20">
           <motion.div
             initial="hidden"
             animate={shouldShowSection}

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 import App from './App.tsx'
 
-import './global.css'
+import './styles/globals.css'
 import './i18n'
 
 const root = document.getElementById('root')

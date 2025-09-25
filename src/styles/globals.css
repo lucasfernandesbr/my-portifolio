@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Space Grotesk', sans-serif;
+  --brand-black: #212227;
+  --brand-white: #FEFCFD;
+  --gray-10: #F3F3F3;
+  --gray-20: #E9EBEC;
+  --gray-30: #D4D6DB;
+  --gray-40: #A3A7B1;
+  --gray-50: #71757E;
+  --gray-60: #595B63;
+  --gray-70: #48494F;
+  --gray-80: #36373C;
+  --gray-90: #1F2025;
+  --gray-100: #111111;
+  --support-01: #2970FF;
+  --support-02: #47CD89;
+  --support-03: #2560D9;
+}
+
+@theme inline {
+  --color-brand-black: var(--brand-black);
+  --color-brand-white: var(--brand-white);
+  --color-gray-10: var(--gray-10);
+  --color-gray-20: var(--gray-20);
+  --color-gray-30: var(--gray-30);
+  --color-gray-40: var(--gray-40);
+  --color-gray-50: var(--gray-50);
+  --color-gray-60: var(--gray-60);
+  --color-gray-70: var(--gray-70);
+  --color-gray-80: var(--gray-80);
+  --color-gray-90: var(--gray-90);
+  --color-gray-100: var(--gray-100);
+  --color-support-01: var(--support-01);
+  --color-support-02: var(--support-02);
+  --color-support-03: var(--support-03);
+}
+
+@theme {
+  --breakpoint-xs: 20rem;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+
+    font-family: var(--font-primary);
+  }
+
+  html, body {
+    @apply bg-brand-white dark:bg-brand-black;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, span, a, li, button {
+    @apply text-brand-black dark:text-brand-white;
+  }
+}
