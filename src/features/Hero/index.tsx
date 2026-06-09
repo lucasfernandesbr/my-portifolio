@@ -39,7 +39,6 @@ export default function Hero({ content }: HeroProps) {
     <Section id={id}>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] relative mt-18 flex w-full flex-col items-center gap-14 lg:max-w-full lg:pt-20 lg:pb-20">
-
           {/* subtle radial glow behind title area */}
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(41,112,255,0.07)_0%,transparent_100%)]" />
 
@@ -58,7 +57,7 @@ export default function Hero({ content }: HeroProps) {
               <span className="bg-support-02 absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" />
               <span className="bg-support-02 relative inline-flex h-[8px] w-[8px] rounded-full" />
             </div>
-            <p className="text-xs font-semibold uppercase tracking-widest">
+            <p className="text-xs font-semibold tracking-widest uppercase">
               {ready_online.label}
             </p>
           </div>
@@ -72,7 +71,12 @@ export default function Hero({ content }: HeroProps) {
 
           <div className="flex gap-3">
             {buttons.socials.map(({ href, icon }) => (
-              <Anchor key={href} href={href} icon={icon} variant="socialMedia" />
+              <Anchor
+                key={href}
+                href={href}
+                icon={icon}
+                variant="socialMedia"
+              />
             ))}
           </div>
 
