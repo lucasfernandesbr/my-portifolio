@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { tv } from 'tailwind-variants'
 
 import useAssets from '@stores/useAssets'
@@ -20,13 +19,7 @@ export default function ProjectCard({
   img,
   variant,
 }: ProjectCardProps) {
-  const { images, loadImages } = useAssets()
-
-  const hasImages = Object.keys(images).length
-
-  useEffect(() => {
-    if (!hasImages) loadImages()
-  }, [images, loadImages])
+  const { images } = useAssets()
 
   return (
     <div className={projectCardContainerVariants({ variant })}>
@@ -42,6 +35,8 @@ export default function ProjectCard({
         <img
           src={images[img.key]}
           alt={images[img.alt]}
+          loading="lazy"
+          decoding="async"
           className="bg-brand-black dark:bg-gray-70 h-full w-full rounded-lg object-cover object-center"
         />
       </div>

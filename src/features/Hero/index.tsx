@@ -50,6 +50,10 @@ export default function Hero({ content }: HeroProps) {
             <img
               src={images[ready_online.avatar.key]}
               alt={ready_online.avatar.alt}
+              loading="eager"
+              decoding="async"
+              width={52}
+              height={52}
               className="bg-gray-30 mr-4 h-[52px] w-[52px] rounded-full object-cover"
             />
             <div className="bg-support-02 mr-2 h-[8px] w-[8px] rounded-full" />

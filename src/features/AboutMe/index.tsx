@@ -38,6 +38,8 @@ export default function AboutMe({ content }: AboutMeProps) {
             }}
             src={images[img.key]}
             alt={img.alt}
+            loading="lazy"
+            decoding="async"
             className="xs:w-full xs:h-[400px] xs:object-[25%_60%] max-w-[524px] rounded-lg object-cover lg:h-[600px] lg:object-[25%_75%]"
           />
 
