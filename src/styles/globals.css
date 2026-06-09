@@ -66,10 +66,18 @@
     font-family: var(--font-sans);
   }
 
+  /* Universal color transition so every theme-dependent surface (header,
+     body, sections, cards…) switches in sync on dark/light toggle. Component
+     utilities like transition-all/transition-transform still override this. */
+  *,
+  ::before,
+  ::after {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
   html,
   body {
     @apply bg-brand-white dark:bg-brand-black;
-    @apply transition-colors duration-200;
   }
 
   p,
@@ -84,6 +92,5 @@
   li,
   button {
     @apply text-brand-black dark:text-brand-white;
-    @apply transition-colors duration-200;
   }
 }
