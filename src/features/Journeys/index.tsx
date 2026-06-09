@@ -42,6 +42,7 @@ export default function Journeys({ content }: JourneysProps) {
 
           <div className="xs:flex-col border-border-ui flex border-t-1 lg:flex-row">
             <JourneyList
+              kind="professional"
               icon={professional.icon}
               title={professional.title}
               list={professional.journey}
@@ -49,6 +50,7 @@ export default function Journeys({ content }: JourneysProps) {
             />
 
             <JourneyList
+              kind="academic"
               icon={academic.icon}
               title={academic.title}
               list={academic.journey}

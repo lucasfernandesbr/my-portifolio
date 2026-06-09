@@ -12,7 +12,10 @@ export type JourneyList = {
   specialization: string
 }
 
+export type JourneyKind = 'professional' | 'academic'
+
 export type JourneyListProps = {
+  kind: JourneyKind
   icon: IconName
   title: string
   list: JourneyList[]
