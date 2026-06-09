@@ -11,11 +11,11 @@ export default function Footer({ content }: FooterProps) {
   return (
     <Section>
       <div className="flex flex-1 justify-center">
-        <div className="xs:pt-8 xs:pb-8 xs:gap-12 xs:max-w-[468px] flex w-full flex-col gap-12 lg:max-w-full lg:pt-20 lg:pb-20">
-          <div className="xs:flex-col-reverse xs:gap-10 flex w-full items-center justify-between lg:flex-row">
-            <ul className="xs:flex-col flex gap-14 lg:flex-row">
+        <div className="xs:pt-8 xs:pb-8 xs:gap-10 xs:max-w-[468px] flex w-full flex-col gap-10 lg:max-w-full lg:pt-20 lg:pb-20">
+          <div className="xs:flex-col-reverse xs:gap-8 flex w-full items-center justify-between lg:flex-row">
+            <ul className="xs:flex-col xs:items-center flex gap-14 lg:flex-row">
               {nav.map(({ id, label }) => (
-                <li>
+                <li key={id}>
                   <Anchor
                     label={label}
                     onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
@@ -26,18 +26,20 @@ export default function Footer({ content }: FooterProps) {
               ))}
             </ul>
 
-            <ul className="flex gap-8">
+            <ul className="flex gap-3">
               {socials.map(({ href, icon }) => (
-                <li>
+                <li key={href}>
                   <Anchor href={href} icon={icon} variant="socialMedia" />
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-gray-20 dark:bg-gray-80 h-[1px] w-full" />
+          <div className="bg-border-ui h-[1px] w-full" />
 
-          <p className="xs:text-center lg:text-left">{copyright}</p>
+          <p className="text-muted-fg xs:text-center text-sm lg:text-left">
+            {copyright}
+          </p>
         </div>
       </div>
     </Section>

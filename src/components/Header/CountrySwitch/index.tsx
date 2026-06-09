@@ -44,6 +44,7 @@ export default function CountrySwitch({ icon, countries }: CountrySwitchProps) {
             {formatCountries.map(({ country, key, alt, label }) => {
               return (
                 <li
+                  key={country}
                   className="hover:bg-gray-20 dark:hover:bg-gray-80 flex w-full cursor-pointer items-center gap-3 rounded-sm p-2"
                   onClick={() => handleSelectCountry(country)}
                 >
