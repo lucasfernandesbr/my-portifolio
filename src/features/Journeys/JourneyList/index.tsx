@@ -2,42 +2,44 @@ import { JourneyListProps } from './types'
 
 export default function JourneyList({ title, list }: JourneyListProps) {
   return (
-    <div className="xs:p-10 xs:first:pb-0 xs:last:pb-0 border-border-ui last-pr-0 flex w-full flex-col pb-0 md:last:border-0 lg:border-r-1 lg:p-12 lg:pb-0">
-      <div className="xs:justify-center flex lg:justify-start">
-        <p className="text-3xl font-semibold">{title}</p>
-      </div>
+    <div className="xs:p-8 border-border-ui flex w-full flex-col gap-8 lg:border-r-1 lg:p-12 lg:last:border-r-0">
+      <p className="xs:text-center font-display text-2xl font-semibold tracking-tight lg:text-start">
+        {title}
+      </p>
 
-      <ul className="flex w-full flex-col">
+      <ol className="relative flex flex-col gap-0">
+        {/* vertical connector line */}
+        <div className="bg-border-ui absolute top-2 bottom-2 left-[7px] w-[2px]" />
+
         {list.map(
           ({ institution, location_time, qualification, specialization }) => (
-            <li className="xs:flex-col border-border-ui flex items-center justify-between gap-3 border-b pt-10 pb-10 last:border-0 lg:flex-row">
-              <div className="xs:items-center flex flex-col gap-3 lg:items-start">
-                <p className="xs:text-center xs:text-lg font-semibold lg:text-start lg:text-2xl">
-                  {institution}
-                </p>
+            <li
+              key={institution}
+              className="relative flex flex-col gap-1 pb-10 pl-7 last:pb-0"
+            >
+              {/* timeline dot */}
+              <div className="border-border-ui bg-brand-white dark:bg-brand-black absolute top-1.5 left-0 h-4 w-4 rounded-full border-2" />
 
-                <div className="flex items-center gap-3">
-                  <div className="xs:hidden bg-gray-40 h-[12px] w-[12px] rounded-full lg:block" />
+              <p className="text-base leading-snug font-semibold">
+                {institution}
+              </p>
 
-                  <p className="xs:text-center text-gray-70 dark:text-gray-20 text-sm font-medium lg:text-left">
-                    {location_time}
-                  </p>
-                </div>
-              </div>
+              <p className="text-muted-fg text-xs font-medium">
+                {location_time}
+              </p>
 
-              <div className="xs:text-center flex w-[200px] flex-col gap-3 lg:text-end">
-                <p className="xs:font-normal xs:text-sm lg:font-semibold">
-                  {specialization}
-                </p>
-
-                <p className="xs:font-normal xs:text-sm lg:font-semibold">
+              <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
                   {qualification}
-                </p>
+                </span>
+                <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
+                  {specialization}
+                </span>
               </div>
             </li>
           ),
         )}
-      </ul>
+      </ol>
     </div>
   )
 }
