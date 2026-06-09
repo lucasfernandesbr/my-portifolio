@@ -152,6 +152,12 @@ export default {
       title: 'Profissional',
       journey: [
         {
+          institution: 'Exactaworks',
+          location_time: 'São Paulo, SP, Brasil, 2025 - Atualmente',
+          qualification: 'Desenvolvedor Frontend',
+          specialization: 'Alocado no Cliente Familhão - Time de Parcerias',
+        },
+        {
           institution: 'Wellhub',
           location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
           qualification: 'Desenvolvedor Frontend',

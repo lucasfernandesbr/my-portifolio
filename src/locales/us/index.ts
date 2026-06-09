@@ -152,6 +152,12 @@ export default {
       title: 'Professional',
       journey: [
         {
+          institution: 'Exactaworks',
+          location_time: 'São Paulo, SP, Brazil, 2025 - Current',
+          qualification: 'Frontend Developer',
+          specialization: 'Allocated at Familhão Client - Partner Team',
+        },
+        {
           institution: 'Wellhub',
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
           qualification: 'Frontend Developer',
