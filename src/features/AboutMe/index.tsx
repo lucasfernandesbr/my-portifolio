@@ -1,5 +1,7 @@
 import * as motion from 'motion/react-client'
 
+import { fadeLeftDelay, fadeUpDelay } from '@lib/motion'
+
 import useAssets from '@stores/useAssets'
 
 import useSectionReveal from '@hooks/useSectionReveal'
@@ -28,14 +30,7 @@ export default function AboutMe({ content }: AboutMeProps) {
           <motion.img
             initial="hidden"
             animate={shouldShowSection}
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              show: {
-                opacity: 1,
-                x: 0,
-                transition: { duration: 0.3, ease: 'easeInOut', delay: 0.2 },
-              },
-            }}
+            variants={fadeLeftDelay(0.2)}
             src={images[img.key]}
             alt={img.alt}
             loading="lazy"
@@ -47,14 +42,7 @@ export default function AboutMe({ content }: AboutMeProps) {
             <motion.h1
               initial="hidden"
               animate={shouldShowSection}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.3, ease: 'easeInOut', delay: 0.4 },
-                },
-              }}
+              variants={fadeUpDelay(0.4)}
               className="xs:text-4xl font-display text-5xl font-semibold tracking-tight text-balance"
             >
               {title}
@@ -63,14 +51,7 @@ export default function AboutMe({ content }: AboutMeProps) {
             <motion.div
               initial="hidden"
               animate={shouldShowSection}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.3, ease: 'easeInOut', delay: 0.6 },
-                },
-              }}
+              variants={fadeUpDelay(0.6)}
               className="xs:text-center flex flex-col gap-6 text-justify lg:text-left"
             >
               <Markdown content={about_me} />

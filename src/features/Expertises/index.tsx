@@ -2,6 +2,8 @@ import * as motion from 'motion/react-client'
 
 import { cn } from '@/lib/utils'
 
+import { fadeLeftDelay, fadeUp, staggerContainer } from '@lib/motion'
+
 import useAssets from '@stores/useAssets'
 import { invertIcons } from '@stores/useAssets/getAssets'
 
@@ -24,14 +26,7 @@ export default function Expertises({ content }: ExpertisesProps) {
           <motion.div
             initial="hidden"
             animate={revealed ? 'show' : 'hidden'}
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              show: {
-                opacity: 1,
-                x: 0,
-                transition: { duration: 0.3, ease: 'easeInOut', delay: 0.2 },
-              },
-            }}
+            variants={fadeLeftDelay(0.2)}
             className="xs:text-center xs:items-center flex flex-col gap-10 lg:items-start lg:text-left"
           >
             <h1 className="xs:text-4xl font-display text-5xl font-semibold tracking-tight text-balance">
@@ -44,9 +39,7 @@ export default function Expertises({ content }: ExpertisesProps) {
           <motion.ul
             initial="hidden"
             animate={revealed ? 'show' : 'hidden'}
-            variants={{
-              show: { transition: { staggerChildren: 0.1 } },
-            }}
+            variants={staggerContainer}
             className="xs:flex-wrap xs:gap-10 xs:justify-center flex w-full lg:justify-between"
           >
             {techs.map(({ key, alt }) => {
@@ -54,14 +47,7 @@ export default function Expertises({ content }: ExpertisesProps) {
 
               return (
                 <motion.li
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    show: {
-                      opacity: 1,
-                      y: 0,
-                      transition: { duration: 0.3, ease: 'easeInOut' },
-                    },
-                  }}
+                  variants={fadeUp}
                   key={alt}
                   className="xs:h-8 flex items-center rounded-sm lg:h-10"
                 >
