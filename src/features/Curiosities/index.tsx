@@ -30,7 +30,7 @@ export default function Curiosities({ content }: CuriositiesProps) {
                   transition: { duration: 0.3, ease: 'easeInOut', delay: 0.2 },
                 },
               }}
-              className="xs:text-4xl xs:text-center font-semibold lg:text-left lg:text-5xl"
+              className="xs:text-4xl xs:text-center font-display font-semibold tracking-tight text-balance lg:text-left lg:text-5xl"
             >
               {title}
             </motion.h1>

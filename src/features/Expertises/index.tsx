@@ -34,7 +34,9 @@ export default function Expertises({ content }: ExpertisesProps) {
             }}
             className="xs:text-center xs:items-center flex flex-col gap-10 lg:items-start lg:text-left"
           >
-            <h1 className="xs:text-4xl text-5xl font-semibold">{title}</h1>
+            <h1 className="xs:text-4xl font-display text-5xl font-semibold tracking-tight text-balance">
+              {title}
+            </h1>
 
             <p className="w-full max-w-[640px]">{description}</p>
           </motion.div>

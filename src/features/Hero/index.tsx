@@ -64,14 +64,19 @@ export default function Hero({ content }: HeroProps) {
 
           <h1
             ref={titleRef}
-            className="text-brand-black xs:text-4xl text-center font-extrabold md:text-5xl lg:text-7xl"
+            className="text-brand-black xs:text-4xl font-display text-center font-extrabold tracking-tight text-balance md:text-5xl lg:text-7xl"
           >
             <Markdown content={words} />
           </h1>
 
           <div className="flex gap-4">
             {buttons.socials.map(({ href, icon }) => (
-              <Anchor key={href} href={href} icon={icon} variant="socialMedia" />
+              <Anchor
+                key={href}
+                href={href}
+                icon={icon}
+                variant="socialMedia"
+              />
             ))}
           </div>
 

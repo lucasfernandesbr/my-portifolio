@@ -31,7 +31,9 @@ export default function Journeys({ content }: JourneysProps) {
       >
         <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] flex w-full flex-col gap-12 lg:max-w-full lg:pt-20 lg:pb-20">
           <div className="flex flex-col items-center gap-10">
-            <h1 className="xs:text-4xl text-5xl font-semibold">{title}</h1>
+            <h1 className="xs:text-4xl font-display text-5xl font-semibold tracking-tight text-balance">
+              {title}
+            </h1>
 
             <p className="w-full max-w-[640px] text-center">{description}</p>
           </div>

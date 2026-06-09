@@ -55,7 +55,7 @@ export default function AboutMe({ content }: AboutMeProps) {
                   transition: { duration: 0.3, ease: 'easeInOut', delay: 0.4 },
                 },
               }}
-              className="xs:text-4xl text-5xl font-semibold"
+              className="xs:text-4xl font-display text-5xl font-semibold tracking-tight text-balance"
             >
               {title}
             </motion.h1>
