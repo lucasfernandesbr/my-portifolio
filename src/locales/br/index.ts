@@ -195,6 +195,7 @@ export default {
           key: 'wellhub_smb_flow',
           alt: 'Projeto 1 - Wellhub SMB Flow',
         },
+        tags: ['React', 'Next.js', 'TypeScript', 'A/B Testing', 'Salesforce'],
       },
       {
         title: 'Wellhub – Website Público (Unlogged)',
@@ -204,6 +205,7 @@ export default {
           alt: 'Projeto 2 - Wellhub Website Público (Unlogged)',
         },
         variant: 'inverted',
+        tags: ['React', 'Next.js', 'TypeScript', 'Storybook', 'Segment'],
       },
       {
         title: 'Website Portfólio',
@@ -212,6 +214,13 @@ export default {
           key: 'portifolio',
           alt: 'Projeto 3 - Portfolio Website',
         },
+        tags: ['React', 'Vite', 'TypeScript', 'TailwindCSS', 'Zustand'],
+        links: [
+          {
+            label: 'GitHub',
+            href: 'https://github.com/lucasfernandesbr/my-portifolio',
+          },
+        ],
       },
     ],
   },
