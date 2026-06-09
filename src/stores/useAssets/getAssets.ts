@@ -4,9 +4,7 @@ const syncAssetGlobs = {
 }
 
 const asyncAssetGlobs = {
-  images: import.meta.glob('../../assets/images/*.{jpg,png,webp}', {
-    eager: true,
-  }),
+  images: import.meta.glob('../../assets/images/*.{jpg,png,webp}'),
 }
 
 export const invertIcons: Record<string, boolean> = {
@@ -23,6 +21,7 @@ export function getSyncAssets(type: keyof typeof syncAssetGlobs) {
         .split('/')
         .pop()!
         .replace(/\.\w+$/, '')
+
       return [fileName, (value as any).default]
     }),
   ) as Record<string, string>
@@ -31,16 +30,21 @@ export function getSyncAssets(type: keyof typeof syncAssetGlobs) {
 export async function getAsyncAssets(type: keyof typeof asyncAssetGlobs) {
   const files = asyncAssetGlobs[type]
 
-  const resolved = await Promise.all(
-    Object.entries(files).map(async ([key, value]) => {
-      const mod = typeof value === 'function' ? await value() : value
-      const fileName = key
-        .split('/')
-        .pop()!
-        .replace(/\.\w+$/, '')
-      return [fileName, (mod as any).default || mod]
-    }),
-  )
+  try {
+    const resolved = await Promise.all(
+      Object.entries(files).map(async ([key, value]) => {
+        const mod = typeof value === 'function' ? await value() : value
 
-  return Object.fromEntries(resolved) as Record<string, string>
+        const fileName = key
+          .split('/')
+          .pop()!
+          .replace(/\.\w+$/, '')
+
+        return [fileName, (mod as any).default || mod]
+      }),
+    )
+    return Object.fromEntries(resolved) as Record<string, string>
+  } catch {
+    return {} as Record<string, string>
+  }
 }

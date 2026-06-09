@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import useAssets from '@stores/useAssets'
 
 import AboutMe from '@features/AboutMe'
 import Curiosities from '@features/Curiosities'
@@ -14,6 +16,8 @@ import Header from '@components/Header'
 import useContent from './content'
 
 const Main: React.FC = () => {
+  const { loadImages } = useAssets()
+
   const {
     header,
     hero,
@@ -25,6 +29,10 @@ const Main: React.FC = () => {
     curiosities,
     footer,
   } = useContent()
+
+  useEffect(() => {
+    loadImages()
+  }, [loadImages])
 
   return (
     <div className="flex size-full flex-col justify-center align-middle">

@@ -72,6 +72,7 @@ export default function Projects({ content }: ProjectsProps) {
           >
             {items.map(({ title, description, img, variant }, index) => (
               <motion.li
+                key={title}
                 initial="hidden"
                 animate={shouldShowSection}
                 variants={{

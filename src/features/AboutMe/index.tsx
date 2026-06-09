@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import * as motion from 'motion/react-client'
 
 import useAssets from '@stores/useAssets'
@@ -12,17 +11,11 @@ import { AboutMeProps } from './types'
 
 export default function AboutMe({ content }: AboutMeProps) {
   const { ref, revealed } = useSectionReveal()
-  const { images, loadImages } = useAssets()
+  const { images } = useAssets()
 
   const { id, img, title, content: about_me } = content
 
   const shouldShowSection = revealed ? 'show' : 'hidden'
-
-  const hasImages = Object.keys(images).length
-
-  useEffect(() => {
-    if (!hasImages) loadImages()
-  }, [images, loadImages])
 
   return (
     <Section ref={ref} id={id}>

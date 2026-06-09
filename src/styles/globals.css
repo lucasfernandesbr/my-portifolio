@@ -48,16 +48,27 @@
 
 @layer base {
   * {
-    @apply transition-colors duration-200;
-
     font-family: var(--font-primary);
   }
 
-  html, body {
+  html,
+  body {
     @apply bg-brand-white dark:bg-brand-black;
+    @apply transition-colors duration-200;
   }
 
-  p, h1, h2, h3, h4, h5, h6, span, a, li, button {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a,
+  li,
+  button {
     @apply text-brand-black dark:text-brand-white;
+    @apply transition-colors duration-200;
   }
 }

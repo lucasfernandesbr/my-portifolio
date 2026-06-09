@@ -16,19 +16,13 @@ export default function Hero({ content }: HeroProps) {
 
   const { id, title, ready_online, buttons } = content
 
-  const { images, loadImages } = useAssets()
-
-  const hasImages = Object.keys(images).length
+  const { images } = useAssets()
 
   const words =
     title
       .match(/\S+/g)
       ?.map((word) => `<span class="span-word inline-block">${word}</span>`)
       .join('&nbsp;') ?? ''
-
-  useEffect(() => {
-    if (!hasImages) loadImages()
-  }, [images, loadImages])
 
   useEffect(() => {
     const titleElement = titleRef.current
@@ -73,7 +67,7 @@ export default function Hero({ content }: HeroProps) {
 
           <div className="flex gap-4">
             {buttons.socials.map(({ href, icon }) => (
-              <Anchor href={href} icon={icon} variant="socialMedia" />
+              <Anchor key={href} href={href} icon={icon} variant="socialMedia" />
             ))}
           </div>
 

@@ -25,7 +25,7 @@ export default function Desktop({ content }: HeaderProps) {
 
             <ul className="flex gap-14">
               {nav.map(({ id, label }) => (
-                <li>
+                <li key={id}>
                   <Anchor
                     label={label}
                     onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>

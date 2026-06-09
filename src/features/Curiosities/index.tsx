@@ -1,7 +1,4 @@
-import { useEffect } from 'react'
 import * as motion from 'motion/react-client'
-
-import useAssets from '@stores/useAssets'
 
 import useSectionReveal from '@hooks/useSectionReveal'
 
@@ -12,15 +9,8 @@ import { CuriositiesProps } from './types'
 
 export default function Curiosities({ content }: CuriositiesProps) {
   const { ref, revealed } = useSectionReveal()
-  const { images, loadImages } = useAssets()
 
   const { id, title, description, items } = content
-
-  const hasImages = Object.keys(images).length
-
-  useEffect(() => {
-    if (!hasImages) loadImages()
-  }, [images, loadImages])
 
   return (
     <Section ref={ref} id={id}>

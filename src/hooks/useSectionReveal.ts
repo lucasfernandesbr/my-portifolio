@@ -1,47 +1,30 @@
 import { useEffect, useRef, useState } from 'react'
 
-export default function useSectionReveal(threshold = 0.2) {
+export default function useSectionReveal(threshold = 0.25) {
   const ref = useRef<HTMLElement | null>(null)
-  const [revealed, setRevealed] = useState(false)
+  const prefersReduced =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const [revealed, setRevealed] = useState(prefersReduced)
 
   useEffect(() => {
+    if (prefersReduced) return
     const section = ref.current
     if (!section) return
 
-    let lastScrollY = window.scrollY
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true)
+          observer.unobserve(section)
+        }
+      },
+      { threshold },
+    )
 
-    const checkVisibility = () => {
-      if (!section) return
-      const rect = section.getBoundingClientRect()
-      const windowHeight = window.innerHeight
-
-      const elementHeight = rect.height
-      const visibleHeight =
-        Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top)
-      const enoughVisible = visibleHeight >= elementHeight * 0.25
-
-      const enteringFromTop =
-        rect.top < windowHeight &&
-        rect.bottom > 0 &&
-        window.scrollY > lastScrollY &&
-        enoughVisible
-
-      const alreadyAbove = rect.bottom < 0
-      const fullyInView = enoughVisible
-
-      if (!revealed && (enteringFromTop || alreadyAbove || fullyInView)) {
-        setRevealed(true)
-        window.removeEventListener('scroll', checkVisibility)
-      }
-
-      lastScrollY = window.scrollY
-    }
-
-    window.addEventListener('scroll', checkVisibility)
-    checkVisibility()
-
-    return () => window.removeEventListener('scroll', checkVisibility)
-  }, [threshold, revealed])
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [threshold, prefersReduced])
 
   return { ref, revealed }
 }
