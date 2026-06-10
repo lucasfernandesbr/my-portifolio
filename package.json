@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
-    "@types/react-router-dom": "^5.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.5",
@@ -53,7 +52,7 @@
     "prettier": "^3.5.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react-refresh": "^0.16.0",
-    "typescript": "~5.7.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
   }

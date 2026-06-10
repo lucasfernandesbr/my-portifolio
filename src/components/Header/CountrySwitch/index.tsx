@@ -39,11 +39,12 @@ export default function CountrySwitch({ icon, countries }: CountrySwitchProps) {
       </button>
 
       {isOpen && (
-        <div className="bg-brand-white dark:bg-brand-black border-gray-20 dark:border-gray-80 absolute top-14 right-0 w-max rounded-sm border p-2">
+        <div className="bg-brand-white dark:bg-brand-black border-border-ui absolute top-14 right-0 w-max rounded-sm border p-2">
           <ul className="flex w-full flex-col">
             {formatCountries.map(({ country, key, alt, label }) => {
               return (
                 <li
+                  key={country}
                   className="hover:bg-gray-20 dark:hover:bg-gray-80 flex w-full cursor-pointer items-center gap-3 rounded-sm p-2"
                   onClick={() => handleSelectCountry(country)}
                 >

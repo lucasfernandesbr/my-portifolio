@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-primary: 'Inter', sans-serif;
-  --font-secondary: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display-face: 'Space Grotesk', sans-serif;
   --brand-black: #212227;
   --brand-white: #FEFCFD;
   --gray-10: #F3F3F3;
@@ -22,6 +22,17 @@
   --support-01: #2970FF;
   --support-02: #47CD89;
   --support-03: #2560D9;
+
+  /* semantic tokens — light mode defaults */
+  --surface: var(--gray-10);
+  --border-ui: var(--gray-20);
+  --muted-fg: var(--gray-50);
+}
+
+.dark {
+  --surface: var(--gray-90);
+  --border-ui: var(--gray-80);
+  --muted-fg: var(--gray-40);
 }
 
 @theme inline {
@@ -40,6 +51,10 @@
   --color-support-01: var(--support-01);
   --color-support-02: var(--support-02);
   --color-support-03: var(--support-03);
+  --color-surface: var(--surface);
+  --color-border-ui: var(--border-ui);
+  --color-muted-fg: var(--muted-fg);
+  --font-display: var(--font-display-face);
 }
 
 @theme {
@@ -48,16 +63,34 @@
 
 @layer base {
   * {
-    @apply transition-colors duration-200;
-
-    font-family: var(--font-primary);
+    font-family: var(--font-sans);
   }
 
-  html, body {
+  /* Universal color transition so every theme-dependent surface (header,
+     body, sections, cards…) switches in sync on dark/light toggle. Component
+     utilities like transition-all/transition-transform still override this. */
+  *,
+  ::before,
+  ::after {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
+  html,
+  body {
     @apply bg-brand-white dark:bg-brand-black;
   }
 
-  p, h1, h2, h3, h4, h5, h6, span, a, li, button {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a,
+  li,
+  button {
     @apply text-brand-black dark:text-brand-white;
   }
 }

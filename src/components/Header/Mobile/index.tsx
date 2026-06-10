@@ -58,7 +58,7 @@ export default function Mobile({ content }: HeaderProps) {
           <div className="bg-brand-white dark:bg-brand-black flex h-[calc(100dvh-72px)] w-full flex-col items-center justify-center">
             <ul className="flex flex-col gap-14">
               {nav.map(({ id, label }) => (
-                <li>
+                <li key={id}>
                   <Anchor
                     label={label}
                     onClick={(e) => handleHeaderOptionClick(e, id)}

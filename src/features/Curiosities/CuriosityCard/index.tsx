@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import useAssets from '@stores/useAssets'
 
 import { CuriosityCardProps } from './types'
@@ -9,19 +7,15 @@ export default function CuriosityCard({
   description,
   image,
 }: CuriosityCardProps) {
-  const { images, loadImages } = useAssets()
-
-  const hasImages = Object.keys(images).length
-
-  useEffect(() => {
-    if (!hasImages) loadImages()
-  }, [images, loadImages])
+  const { images } = useAssets()
 
   return (
     <div className="flex max-w-[320px] flex-col gap-8">
       <img
         src={images[image.key]}
         alt={image.alt}
+        loading="lazy"
+        decoding="async"
         className="bg-brand-black dark:bg-gray-70 h-[216px] rounded-lg object-cover"
       />
 

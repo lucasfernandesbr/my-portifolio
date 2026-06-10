@@ -1,43 +1,119 @@
+import Icon from '@components/Icon'
+
 import { JourneyListProps } from './types'
 
-export default function JourneyList({ title, list }: JourneyListProps) {
-  return (
-    <div className="xs:p-10 xs:first:pb-0 xs:last:pb-0 border-gray-20 dark:border-gray-80 last-pr-0 flex w-full flex-col pb-0 md:last:border-0 lg:border-r-1 lg:p-12 lg:pb-0">
-      <div className="xs:justify-center flex lg:justify-start">
-        <p className="text-3xl font-semibold">{title}</p>
-      </div>
+type DotVariant = 'active' | 'past' | 'completed'
 
-      <ul className="flex w-full flex-col">
+function TimelineDot({ variant }: { variant: DotVariant }) {
+  // current professional role — pulsing green, "working here now"
+  // (same visual language as the "ready online" dot in the Hero)
+  if (variant === 'active') {
+    return (
+      <span className="absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center">
+        <span className="bg-support-02 absolute inline-flex h-full w-full animate-ping rounded-full opacity-50" />
+        <span className="bg-support-02 ring-brand-white dark:ring-brand-black relative inline-flex h-3 w-3 rounded-full ring-2" />
+      </span>
+    )
+  }
+
+  // completed academic formation — subtle check, kept neutral so green
+  // stays exclusive to "currently working"
+  if (variant === 'completed') {
+    return (
+      <span className="border-border-ui bg-brand-white dark:bg-brand-black text-muted-fg absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center rounded-full border">
+        <Icon type="Check" className="h-2.5 w-2.5" strokeWidth={3} />
+      </span>
+    )
+  }
+
+  // past professional role — muted solid dot, less prominent
+  return (
+    <span className="absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center">
+      <span className="bg-muted-fg ring-brand-white dark:ring-brand-black inline-flex h-3 w-3 rounded-full ring-2" />
+    </span>
+  )
+}
+
+export default function JourneyList({ kind, title, list }: JourneyListProps) {
+  const dotVariant = (index: number): DotVariant => {
+    if (kind === 'academic') return 'completed'
+    // professional list is ordered most-recent-first, so the first entry
+    // is the current role
+    return index === 0 ? 'active' : 'past'
+  }
+
+  return (
+    <div className="xs:p-8 border-border-ui flex w-full flex-col gap-8 lg:border-r-1 lg:p-12 lg:last:border-r-0">
+      <p className="xs:text-center font-display text-2xl font-semibold tracking-tight lg:text-start">
+        {title}
+      </p>
+
+      <ol className="relative flex flex-col gap-0">
+        {/* vertical connector line */}
+        <div className="bg-border-ui absolute top-2 bottom-2 left-[7px] w-[2px]" />
+
         {list.map(
-          ({ institution, location_time, qualification, specialization }) => (
-            <li className="xs:flex-col border-gray-20 dark:border-gray-80 flex items-center justify-between gap-3 border-b pt-10 pb-10 last:border-0 lg:flex-row">
-              <div className="xs:items-center flex flex-col gap-3 lg:items-start">
-                <p className="xs:text-center xs:text-lg font-semibold lg:text-start lg:text-2xl">
+          (
+            {
+              institution,
+              location_time,
+              qualification,
+              specialization,
+              description,
+              stack,
+            },
+            index,
+          ) => (
+            <li
+              key={institution}
+              className="relative flex flex-col pb-10 pl-7 last:pb-0"
+            >
+              {/* timeline dot */}
+              <TimelineDot variant={dotVariant(index)} />
+
+              {/* text content — hover highlight lives here so the dot and
+                  connector line stay perfectly aligned */}
+              <div className="-mx-3 flex flex-col gap-1 rounded-lg px-3 py-2 transition-transform duration-200 hover:translate-x-0.5">
+                <p className="text-base leading-snug font-semibold">
                   {institution}
                 </p>
 
-                <div className="flex items-center gap-3">
-                  <div className="xs:hidden bg-gray-40 h-[12px] w-[12px] rounded-full lg:block" />
+                <p className="text-muted-fg text-xs font-medium">
+                  {location_time}
+                </p>
 
-                  <p className="xs:text-center text-gray-70 dark:text-gray-20 text-sm font-medium lg:text-left">
-                    {location_time}
+                {description && (
+                  <p className="text-muted-fg mt-1 text-sm leading-relaxed">
+                    {description}
                   </p>
+                )}
+
+                <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                  <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
+                    {qualification}
+                  </span>
+                  <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
+                    {specialization}
+                  </span>
                 </div>
-              </div>
 
-              <div className="xs:text-center flex w-[200px] flex-col gap-3 lg:text-end">
-                <p className="xs:font-normal xs:text-sm lg:font-semibold">
-                  {specialization}
-                </p>
-
-                <p className="xs:font-normal xs:text-sm lg:font-semibold">
-                  {qualification}
-                </p>
+                {stack.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+                    {stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-muted-fg/10 text-muted-fg rounded-full px-2.5 py-0.5 text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </li>
           ),
         )}
-      </ul>
+      </ol>
     </div>
   )
 }
