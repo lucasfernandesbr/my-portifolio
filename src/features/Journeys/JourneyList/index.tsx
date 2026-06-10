@@ -54,31 +54,61 @@ export default function JourneyList({ kind, title, list }: JourneyListProps) {
 
         {list.map(
           (
-            { institution, location_time, qualification, specialization },
+            {
+              institution,
+              location_time,
+              qualification,
+              specialization,
+              description,
+              stack,
+            },
             index,
           ) => (
             <li
               key={institution}
-              className="relative flex flex-col gap-1 pb-10 pl-7 last:pb-0"
+              className="relative flex flex-col pb-10 pl-7 last:pb-0"
             >
               {/* timeline dot */}
               <TimelineDot variant={dotVariant(index)} />
 
-              <p className="text-base leading-snug font-semibold">
-                {institution}
-              </p>
+              {/* text content — hover highlight lives here so the dot and
+                  connector line stay perfectly aligned */}
+              <div className="-mx-3 flex flex-col gap-1 rounded-lg px-3 py-2 transition-transform duration-200 hover:translate-x-0.5">
+                <p className="text-base leading-snug font-semibold">
+                  {institution}
+                </p>
 
-              <p className="text-muted-fg text-xs font-medium">
-                {location_time}
-              </p>
+                <p className="text-muted-fg text-xs font-medium">
+                  {location_time}
+                </p>
 
-              <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-                <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
-                  {qualification}
-                </span>
-                <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
-                  {specialization}
-                </span>
+                {description && (
+                  <p className="text-muted-fg mt-1 text-sm leading-relaxed">
+                    {description}
+                  </p>
+                )}
+
+                <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                  <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
+                    {qualification}
+                  </span>
+                  <span className="border-border-ui text-muted-fg rounded-full border px-2.5 py-0.5 text-xs">
+                    {specialization}
+                  </span>
+                </div>
+
+                {stack.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+                    {stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-muted-fg/10 text-muted-fg rounded-full px-2.5 py-0.5 text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </li>
           ),

@@ -156,18 +156,27 @@ export default {
           location_time: 'São Paulo, SP, Brazil, 2025 - Current',
           qualification: 'Frontend Developer',
           specialization: 'Allocated at Familhão Client - Partner Team',
+          description:
+            'Building interfaces and new features for the Partner team, focused on componentization, performance and API integration.',
+          stack: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         },
         {
           institution: 'Wellhub',
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
           qualification: 'Frontend Developer',
           specialization: 'B2B Acquisition Team',
+          description:
+            'Worked on the B2B acquisition flow with A/B testing, feature flags and integrations with Salesforce, Segment and Amplitude.',
+          stack: ['React', 'Next.js', 'TypeScript', 'Storybook', 'Jest'],
         },
         {
           institution: 'Wittel Comunicações LTDA',
           location_time: 'São Paulo, SP, Brazil, 2018 - 2021',
           qualification: 'Technical Support',
           specialization: 'IPC Tech Team',
+          description:
+            'Technical support for large-scale communication systems, incident diagnosis and assistance to corporate clients.',
+          stack: ['Windows Server', 'Networking', 'VoIP', 'SQL'],
         },
       ],
     },
@@ -179,12 +188,18 @@ export default {
           location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
           qualification: 'GoStack',
           specialization: 'React, React Native and Node',
+          description:
+            'An intensive full-stack program focused on the JavaScript ecosystem with Node.js, ReactJS, and React Native. The course covered the entire development cycle from scratch to deployment, using modern tools and practices such as Docker, MongoDB, PostgreSQL, Express, AdonisJS, Sequelize, JWT authentication, organized folder structures, and JavaScript/TypeScript.',
+          stack: ['React', 'React Native', 'Node.js', 'TypeScript'],
         },
         {
           institution: 'FMU - Centro Universitário',
           location_time: 'São Paulo, SP, Brazil, 2016 - 2019',
           qualification: 'Degree',
           specialization: 'Systems Analysis and Development',
+          description:
+            'Degree with a solid foundation in programming logic, databases, software engineering and systems development.',
+          stack: ['Java', 'SQL', 'OOP', 'Software Engineering'],
         },
       ],
     },

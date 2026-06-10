@@ -156,18 +156,27 @@ export default {
           location_time: 'São Paulo, SP, Brasil, 2025 - Atualmente',
           qualification: 'Desenvolvedor Frontend',
           specialization: 'Alocado no Cliente Familhão - Time de Parcerias',
+          description:
+            'Desenvolvimento de interfaces e novas features no time de Parcerias, com foco em componentização, performance e integração com APIs.',
+          stack: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'],
         },
         {
           institution: 'Wellhub',
           location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
           qualification: 'Desenvolvedor Frontend',
           specialization: 'B2B Acquisition Team',
+          description:
+            'Atuação no fluxo de aquisição B2B com experimentação (A/B testing), feature flags e integrações com Salesforce, Segment e Amplitude.',
+          stack: ['React', 'Next.js', 'TypeScript', 'Storybook', 'Jest'],
         },
         {
           institution: 'Wittel Comunicações LTDA',
           location_time: 'São Paulo, SP, Brasil, 2018 - 2021',
           qualification: 'Suporte Técnico',
           specialization: 'IPC Tech Team',
+          description:
+            'Suporte técnico a sistemas de comunicação de grande escala, diagnóstico de incidentes e atendimento a clientes corporativos.',
+          stack: ['Windows Server', 'Redes', 'VoIP', 'SQL'],
         },
       ],
     },
@@ -179,12 +188,18 @@ export default {
           location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
           qualification: 'Fullstack',
           specialization: 'React, React Native and Node',
+          description:
+            'Formação intensiva em desenvolvimento web e mobile, construindo aplicações completas do frontend ao backend.',
+          stack: ['React', 'React Native', 'Node.js', 'TypeScript'],
         },
         {
           institution: 'FMU - Centro Universitário',
           location_time: 'São Paulo, SP, Brasil, 2016 - 2019',
           qualification: 'CST',
           specialization: 'Análise e Desenvolvimento de Sistemas',
+          description:
+            'Graduação com base sólida em lógica de programação, banco de dados, engenharia de software e desenvolvimento de sistemas.',
+          stack: ['Java', 'SQL', 'POO', 'Engenharia de Software'],
         },
       ],
     },

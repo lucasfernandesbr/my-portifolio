@@ -10,6 +10,8 @@ export type JourneyList = {
   location_time: string
   qualification: string
   specialization: string
+  description?: string
+  stack: string[]
 }
 
 export type JourneyKind = 'professional' | 'academic'
