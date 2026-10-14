@@ -60,7 +60,7 @@ export default {
         },
         {
           icon: 'Linkedin',
-          href: 'https://www.linkedin.com/in/lucas-fernandes-souza-539264149',
+          href: 'https://www.linkedin.com/in/lucasfernandessouzabr',
         },
       ],
     },
@@ -69,12 +69,12 @@ export default {
     id: 'introduction',
     cards: [
       {
-        title: '3+',
+        title: '5+',
         content: 'Anos de experiência profissional',
       },
       {
         title: 'ESL',
-        content: 'Inglês como segundo idioma',
+        content: 'Inglês avançado',
       },
       {
         title: 'Qualidade',
@@ -93,8 +93,8 @@ export default {
       alt: 'Retrato de Lucas Fernandes Souza',
     },
     title: 'Um Pouco Sobre Mim',
-    content: `Sou Desenvolvedor Frontend, baseado em São Paulo, especializado em React, Next.js, TypeScript e testes E2E.<br /><br />  
-      Nos últimos anos, atuei na Wellhub (antiga Gympass) junto ao time de Business Acquisition, contribuindo para o site público (unlogged) e o fluxo de SMB, desenvolvendo componentes reutilizáveis, implementando testes automatizados e integrando plataformas como Salesforce, Hubspot, Segment e Amplitude.<br /><br /> 
+    content: `Sou Desenvolvedor Frontend, baseado em São Paulo, com mais de 5 anos de experiência construindo features de ponta a ponta em React, Next.js, TypeScript e testes E2E.<br /><br />
+      Atualmente estou na Exactaworks, responsável por páginas e fluxos de benefícios voltados a parceiros (Caixa, Globoplay, Lavitan), da arquitetura ao deploy. Antes disso, passei quase quatro anos na Wellhub (antiga Gympass) junto ao time de Business Acquisition, construindo o site público (unlogged) e o fluxo de SMB, componentes reutilizáveis, testes automatizados e integrações com Salesforce, Hubspot, Segment e Amplitude.<br /><br />
       Meu trabalho diário envolve colaboração com equipes internacionais, aplicação de metodologias ágeis e alinhamento das soluções técnicas com os objetivos de negócio.`,
   },
   expertises: {
@@ -153,7 +153,8 @@ export default {
       journey: [
         {
           institution: 'Exactaworks',
-          location_time: 'São Paulo, SP, Brasil, 2025 - Atualmente',
+          location_time: 'São Paulo, SP, Brasil, 2025 - 2026',
+          current: false,
           qualification: 'Desenvolvedor Frontend',
           specialization: 'Alocado no Cliente Familhão - Time de Parcerias',
           description:
@@ -216,8 +217,17 @@ export default {
       journey: [
         {
           institution: 'Rocketseat',
-          location_time: 'São Paulo, SP, Brasil, 2021 - 2025',
-          qualification: 'Fullstack',
+          location_time: 'São Paulo, SP, Brasil, 2025',
+          qualification: 'Dev com IA',
+          specialization: 'Claude Code, Codex & Cursor',
+          description:
+            'Programa intensivo sobre construção de software com agentes de IA, cobrindo o editor Cursor com IA integrada, Codex para arquitetura de aplicações e execução automatizada, e configuração de Model Context Protocol (MCP) com skills customizadas. Explorou o Claude Code para análise de codebase, execução de comandos, correção de bugs e entrega de features preservando contexto de IA, além de entrega ponta a ponta orquestrada por IA com ShadCN, Turso, Cloudflare e BetterAuth.',
+          stack: ['Claude Code', 'Codex', 'Cursor', 'MCP'],
+        },
+        {
+          institution: 'Rocketseat',
+          location_time: 'São Paulo, SP, Brasil, 2020',
+          qualification: 'GoStack Bootcamp',
           specialization: 'React, React Native and Node',
           description:
             'Formação intensiva em desenvolvimento web e mobile, construindo aplicações completas do frontend ao backend.',
@@ -342,9 +352,9 @@ export default {
       },
       {
         icon: 'Linkedin',
-        href: 'https://www.linkedin.com/in/lucas-fernandes-souza-539264149',
+        href: 'https://www.linkedin.com/in/lucasfernandessouzabr',
       },
     ],
-    copyright: '© 2025 Lucas Fernandes Souza. Todos os direitos reservados.',
+    copyright: '© 2026 Lucas Fernandes Souza. Todos os direitos reservados.',
   },
 }

@@ -5,8 +5,6 @@ import { JourneyListProps } from './types'
 type DotVariant = 'active' | 'past' | 'completed'
 
 function TimelineDot({ variant }: { variant: DotVariant }) {
-  // current professional role — pulsing green, "working here now"
-  // (same visual language as the "ready online" dot in the Hero)
   if (variant === 'active') {
     return (
       <span className="absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center">
@@ -16,8 +14,6 @@ function TimelineDot({ variant }: { variant: DotVariant }) {
     )
   }
 
-  // completed academic formation — subtle check, kept neutral so green
-  // stays exclusive to "currently working"
   if (variant === 'completed') {
     return (
       <span className="border-border-ui bg-brand-white dark:bg-brand-black text-muted-fg absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center rounded-full border">
@@ -26,7 +22,6 @@ function TimelineDot({ variant }: { variant: DotVariant }) {
     )
   }
 
-  // past professional role — muted solid dot, less prominent
   return (
     <span className="absolute top-1.5 left-0 flex h-4 w-4 items-center justify-center">
       <span className="bg-muted-fg ring-brand-white dark:ring-brand-black inline-flex h-3 w-3 rounded-full ring-2" />
@@ -35,11 +30,10 @@ function TimelineDot({ variant }: { variant: DotVariant }) {
 }
 
 export default function JourneyList({ kind, title, list }: JourneyListProps) {
-  const dotVariant = (index: number): DotVariant => {
+  const dotVariant = (current?: boolean): DotVariant => {
     if (kind === 'academic') return 'completed'
-    // professional list is ordered most-recent-first, so the first entry
-    // is the current role
-    return index === 0 ? 'active' : 'past'
+
+    return current ? 'active' : 'past'
   }
 
   return (
@@ -49,30 +43,24 @@ export default function JourneyList({ kind, title, list }: JourneyListProps) {
       </p>
 
       <ol className="relative flex flex-col gap-0">
-        {/* vertical connector line */}
         <div className="bg-border-ui absolute top-2 bottom-2 left-[7px] w-[2px]" />
 
         {list.map(
-          (
-            {
-              institution,
-              location_time,
-              qualification,
-              specialization,
-              description,
-              stack,
-            },
-            index,
-          ) => (
+          ({
+            institution,
+            location_time,
+            qualification,
+            specialization,
+            description,
+            stack,
+            current,
+          }) => (
             <li
               key={institution}
               className="relative flex flex-col pb-10 pl-7 last:pb-0"
             >
-              {/* timeline dot */}
-              <TimelineDot variant={dotVariant(index)} />
+              <TimelineDot variant={dotVariant(current)} />
 
-              {/* text content — hover highlight lives here so the dot and
-                  connector line stay perfectly aligned */}
               <div className="-mx-3 flex flex-col gap-1 rounded-lg px-3 py-2 transition-transform duration-200 hover:translate-x-0.5">
                 <p className="text-base leading-snug font-semibold">
                   {institution}

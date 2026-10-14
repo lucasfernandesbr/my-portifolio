@@ -39,10 +39,8 @@ export default function Hero({ content }: HeroProps) {
     <Section id={id}>
       <div className="flex flex-1 justify-center">
         <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] relative mt-18 flex w-full flex-col items-center gap-14 lg:max-w-full lg:pt-20 lg:pb-20">
-          {/* subtle radial glow behind title area */}
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(41,112,255,0.07)_0%,transparent_100%)]" />
 
-          {/* pill badge */}
           <div className="border-border-ui bg-surface flex items-center gap-3 rounded-full border px-4 py-2">
             <img
               src={images[ready_online.avatar.key]}

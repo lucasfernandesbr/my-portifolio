@@ -12,6 +12,7 @@ export type JourneyList = {
   specialization: string
   description?: string
   stack: string[]
+  current?: boolean
 }
 
 export type JourneyKind = 'professional' | 'academic'

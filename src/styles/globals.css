@@ -23,7 +23,6 @@
   --support-02: #47CD89;
   --support-03: #2560D9;
 
-  /* semantic tokens — light mode defaults */
   --surface: var(--gray-10);
   --border-ui: var(--gray-20);
   --muted-fg: var(--gray-50);
@@ -66,9 +65,6 @@
     font-family: var(--font-sans);
   }
 
-  /* Universal color transition so every theme-dependent surface (header,
-     body, sections, cards…) switches in sync on dark/light toggle. Component
-     utilities like transition-all/transition-transform still override this. */
   *,
   ::before,
   ::after {

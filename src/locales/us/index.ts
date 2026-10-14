@@ -46,7 +46,7 @@ export default {
       label: 'Ready to code',
     },
     title:
-      'Web developer with solid experienced in JavaScript, specializing in React and Next.js. Focused on delivering reliable and high-quality scalable apps.',
+      'Web developer with solid experience in JavaScript, specializing in React and Next.js. Focused on delivering reliable and high-quality scalable apps.',
     buttons: {
       scroll_down: {
         label: 'Scroll Down',
@@ -60,7 +60,7 @@ export default {
         },
         {
           icon: 'Linkedin',
-          href: 'https://www.linkedin.com/in/lucas-fernandes-souza-539264149',
+          href: 'https://www.linkedin.com/in/lucasfernandessouzabr',
         },
       ],
     },
@@ -69,12 +69,12 @@ export default {
     id: 'introduction',
     cards: [
       {
-        title: '3+',
+        title: '5+',
         content: 'Years of work experience',
       },
       {
         title: 'ESL',
-        content: 'English as second language',
+        content: 'Advanced English proficiency',
       },
       {
         title: 'Quality',
@@ -93,8 +93,8 @@ export default {
       alt: 'Portrait of Lucas Fernandes Souza',
     },
     title: 'A Bit About Me',
-    content: `I’m a Frontend Developer based in São Paulo, Brazil, specialized in React, Next.js, TypeScript and E2E testing.<br /><br /> 
-      Over the last few years, I’ve worked at Wellhub (formerly Gympass) with the Business Acquisition team, contributing to the unlogged website and the SMB flow, developing reusable components, implementing automated testing, and integrating with platforms like Salesforce, Hubspot, Segment, and Amplitude.<br /><br /> 
+    content: `I’m a Frontend Developer based in São Paulo, Brazil, with 5+ years of experience building end-to-end features in React, Next.js, TypeScript and E2E testing.<br /><br />
+      I’m currently at Exactaworks, owning partner-facing product pages and benefit flows (Caixa, Globoplay, Lavitan) from architecture to deployment. Before that, I spent nearly four years at Wellhub (formerly Gympass) on the Business Acquisition team, building the unlogged website and SMB flow, reusable components, automated testing, and integrations with Salesforce, Hubspot, Segment, and Amplitude.<br /><br />
       My daily work involves collaborating with international teams, applying Agile methodologies, and ensuring technical solutions align with business goals.`,
   },
   expertises: {
@@ -153,7 +153,8 @@ export default {
       journey: [
         {
           institution: 'Exactaworks',
-          location_time: 'São Paulo, SP, Brazil, 2025 - Current',
+          location_time: 'São Paulo, SP, Brazil, 2025 - 2026',
+          current: false,
           qualification: 'Frontend Developer',
           specialization: 'Allocated at Familhão Client - Partner Team',
           description:
@@ -216,8 +217,17 @@ export default {
       journey: [
         {
           institution: 'Rocketseat',
-          location_time: 'São Paulo, SP, Brazil, 2021 - 2025',
-          qualification: 'GoStack',
+          location_time: 'São Paulo, SP, Brazil, 2025',
+          qualification: 'Dev with AI',
+          specialization: 'Claude Code, Codex & Cursor',
+          description:
+            'An intensive program on building software with AI agents, covering the Cursor editor with integrated AI, Codex for application architecture and automated execution, and Model Context Protocol (MCP) configuration with custom skills. Explored Claude Code for codebase analysis, running commands, fixing bugs, and shipping features while preserving AI context, plus end-to-end AI-orchestrated delivery with ShadCN, Turso, Cloudflare, and BetterAuth.',
+          stack: ['Claude Code', 'Codex', 'Cursor', 'MCP'],
+        },
+        {
+          institution: 'Rocketseat',
+          location_time: 'São Paulo, SP, Brazil, 2020',
+          qualification: 'GoStack Bootcamp',
           specialization: 'React, React Native and Node',
           description:
             'An intensive full-stack program focused on the JavaScript ecosystem with Node.js, ReactJS, and React Native. The course covered the entire development cycle from scratch to deployment, using modern tools and practices such as Docker, MongoDB, PostgreSQL, Express, AdonisJS, Sequelize, JWT authentication, organized folder structures, and JavaScript/TypeScript.',
@@ -342,9 +352,9 @@ export default {
       },
       {
         icon: 'Linkedin',
-        href: 'https://www.linkedin.com/in/lucas-fernandes-souza-539264149',
+        href: 'https://www.linkedin.com/in/lucasfernandessouzabr',
       },
     ],
-    copyright: '© 2025 Lucas Fernandes Souza. All rights reserved.',
+    copyright: '© 2026 Lucas Fernandes Souza. All rights reserved.',
   },
 }
