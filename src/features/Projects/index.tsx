@@ -24,7 +24,7 @@ export default function Projects({ content }: ProjectsProps) {
   return (
     <Section ref={ref} id={id}>
       <div className="flex flex-1 justify-center">
-        <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] xs:gap-10 flex w-full flex-col items-center lg:max-w-full lg:gap-20 lg:pt-20 lg:pb-20">
+        <div className="xs:pt-8 xs:pb-8 xs:max-w-[468px] xs:gap-10 flex w-full flex-col items-center justify-center lg:max-w-full lg:gap-20 lg:pt-20 lg:pb-20">
           <motion.div
             initial="hidden"
             animate={shouldShowSection}
@@ -54,21 +54,25 @@ export default function Projects({ content }: ProjectsProps) {
             variants={staggerContainerSlow}
             className="xs:gap-10 flex flex-col lg:gap-20"
           >
-            {items.map(({ title, description, img, variant }, index) => (
-              <motion.li
-                key={title}
-                initial="hidden"
-                animate={shouldShowSection}
-                variants={index % 2 === 0 ? fadeLeft : fadeRight}
-              >
-                <ProjectCard
-                  title={title}
-                  description={description}
-                  img={img}
-                  {...(variant && { variant })}
-                />
-              </motion.li>
-            ))}
+            {items.map(
+              ({ title, description, img, variant, tags, links }, index) => (
+                <motion.li
+                  key={title}
+                  initial="hidden"
+                  animate={shouldShowSection}
+                  variants={index % 2 === 0 ? fadeLeft : fadeRight}
+                >
+                  <ProjectCard
+                    title={title}
+                    description={description}
+                    img={img}
+                    {...(variant && { variant })}
+                    {...(tags && { tags })}
+                    {...(links && { links })}
+                  />
+                </motion.li>
+              ),
+            )}
           </motion.ul>
         </div>
       </div>

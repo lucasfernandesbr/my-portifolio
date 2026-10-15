@@ -64,7 +64,7 @@ export default function ProjectCard({
         )}
       </div>
 
-      <div className="xs:w-full xs:max-w-[320px] xs:h-[216px] overflow-hidden rounded-lg lg:h-[368px] lg:w-1/2 lg:max-w-none">
+      <div className="xs:w-full xs:max-w-[320px] xs:h-[216px] overflow-hidden rounded-lg lg:h-auto lg:min-h-[368px] lg:w-1/2 lg:max-w-none lg:self-stretch">
         <img
           src={images[img.key]}
           alt={images[img.alt]}

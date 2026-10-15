@@ -284,6 +284,43 @@ export default {
           },
         ],
       },
+      {
+        title: 'Investigation Game – Brackeys Game Jam',
+        description: `A first-person, pixel-art investigation game built in Godot 4 (GDScript) for the Brackeys Game Jam in a single week. Coming from a frontend background with little GDScript and game-dev experience, I paired my software architecture knowledge with Claude as an AI pair-programmer to learn the engine fast, design clean autoload-based systems (scene, settings, audio, event bus, game state), and ship point & click and drag & drop mechanics under a tight deadline.`,
+        img: {
+          key: 'brackeys_game_jam',
+          alt: 'Project 4 - Investigation Game (Brackeys Game Jam)',
+        },
+        variant: 'inverted',
+        tags: ['Godot 4', 'GDScript', 'Claude', 'Game Jam', 'Pixel Art'],
+        links: [
+          {
+            label: 'Play',
+            href: 'https://ludosouza.itch.io/the-lowes-murder',
+          },
+          {
+            label: 'GitHub',
+            href: 'https://github.com/lucasfernandesbr/brackeys-game-jam',
+          },
+        ],
+      },
+      {
+        title: 'Exactaworks – Familhão',
+        description: `End-to-end delivery of the partner-facing product pages and benefit flows for Familhão, a client of Exactaworks consultancy. Built responsive, accessible UI surfaces in React/Next.js that simplify complex partner logic into intuitive workflows, owning REST API integration, performance optimization, and deployment.`,
+        img: {
+          key: 'familhao',
+          alt: 'Project 5 - Exactaworks Familhão',
+        },
+        tags: [
+          'React',
+          'Next.js',
+          'TypeScript',
+          'Claude Code',
+          'Azure Devops',
+          'Accessibility',
+          'REST API',
+        ],
+      },
     ],
   },
   curiosities: {
